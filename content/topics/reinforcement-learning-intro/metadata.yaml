@@ -1,0 +1,12 @@
+title: Reinforcement Learning
+slug: reinforcement-learning-intro
+categories:
+  - Reinforcement Learning
+  - Machine Learning
+related:
+  - q-learning
+  - rlhf
+tags:
+  - rl
+  - fundamentals
+difficulty: Beginner

@@ -1,0 +1,5 @@
+# Every file requires review from @arpon-kapuria before merging.
+# GitHub auto-adds this as a requested reviewer on every PR.
+# Combine with branch protection's "Require review from Code Owners"
+# to actually make it a merge-blocking requirement (see step 4 below).
+* @arpon-kapuria

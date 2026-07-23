@@ -1,0 +1,14 @@
+title: Neural Network
+slug: neural-network
+categories:
+  - Machine Learning
+  - Deep Learning
+related:
+  - backpropagation
+  - gradient-descent
+  - convolutional-neural-network
+  - rnn
+tags:
+  - fundamentals
+  - architecture
+difficulty: Beginner

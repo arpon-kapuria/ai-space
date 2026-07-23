@@ -1,0 +1,13 @@
+title: RLHF (Reinforcement Learning from Human Feedback)
+slug: rlhf
+categories:
+  - Generative AI
+  - Reinforcement Learning
+related:
+  - gpt
+  - fine-tuning
+  - reinforcement-learning-intro
+tags:
+  - alignment
+  - training
+difficulty: Advanced

@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+/* -------------------------------------------------------------------------
+   Design tokens. Dark is the default (:root). Setting data-theme="light"
+   on <html> overrides the same variable names, so every Tailwind utility
+   already written against these tokens (bg-panel, text-ink-muted, etc.)
+   repaints automatically — nothing in components needs to know which
+   theme is active.
+   ------------------------------------------------------------------------- */
+
+@theme {
+  --color-void: #14161b;
+  --color-void-deep: #0a0b0e;
+  --color-panel: #1c1f26;
+  --color-panel-raised: #262a33;
+  --color-hairline: #333846;
+
+  --color-ink: #edeff3;
+  --color-ink-muted: #9ba1b0;
+  --color-ink-faint: #5c6270;
+
+  /* UI accent — warm signal gold, used for CTAs, focus, links, selection */
+  --color-starlight: #ffc857;
+  --color-starlight-dim: #c99a3e;
+
+  /* Destructive/dismiss accent, pairs with starlight as the primary accent */
+  --color-warm-red: #ff6b5c;
+  --color-warm-red-dim: #cc4a3e;
+
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-void: #f6f7f9;
+  --color-void-deep: #ffffff;
+  --color-panel: #ffffff;
+  --color-panel-raised: #eef0f4;
+  --color-hairline: #d7dbe3;
+
+  --color-ink: #14161b;
+  --color-ink-muted: #545b69;
+  --color-ink-faint: #8a90a0;
+
+  --color-starlight: #8a5a00;
+  --color-starlight-dim: #b5760a;
+
+  --color-warm-red: #d9392c;
+  --color-warm-red-dim: #a8281d;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--color-void);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-starlight) 35%, transparent);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-hairline) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--color-hairline);
+  border-radius: 999px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-starlight);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes constellation-drift {
+  0%,
+  100% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-26px, -18px);
+  }
+}
+
+@keyframes star-twinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.75;
+  }
+}
+
+@keyframes line-pulse {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25rem 0;
+}
+
+.prose-note h1 {
+  display: none;
+}
+
+.prose-note h1,
+.prose-note h2,
+.prose-note h3 {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  letter-spacing: -0.01em;
+}
+.prose-note h2 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.375rem;
+  border-top: 1px solid var(--color-hairline);
+  padding-top: 1.5rem;
+}
+.prose-note h1 + h2 {
+  border-top: none;
+  padding-top: 0;
+}
+.prose-note p {
+  color: color-mix(in srgb, var(--color-ink) 88%, transparent);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+.prose-note code {
+  font-family: var(--font-mono);
+  background: var(--color-panel-raised);
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.3rem;
+  font-size: 0.875em;
+}
+.prose-note pre {
+  background: var(--color-panel-raised);
+  border: 1px solid var(--color-hairline);
+  border-radius: 0.6rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+.prose-note pre code {
+  background: none;
+  padding: 0;
+}
+.prose-note a {
+  color: var(--color-starlight);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose-note ul,
+.prose-note ol {
+  margin: 0 0 1rem 1.25rem;
+  color: color-mix(in srgb, var(--color-ink) 88%, transparent);
+}
+.prose-note ul {
+  list-style: disc;
+}
+.prose-note ol {
+  list-style: decimal;
+}
+.prose-note blockquote {
+  border-left: 2px solid var(--color-starlight-dim);
+  padding-left: 1rem;
+  color: var(--color-ink-muted);
+  font-style: italic;
+  margin: 1rem 0;
+}

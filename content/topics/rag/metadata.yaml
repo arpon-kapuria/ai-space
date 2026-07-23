@@ -1,0 +1,14 @@
+title: Retrieval-Augmented Generation (RAG)
+slug: rag
+categories:
+  - Generative AI
+  - Production AI
+related:
+  - vector-database
+  - embedding
+  - fine-tuning
+tags:
+  - retrieval
+  - llm
+  - architecture
+difficulty: Intermediate

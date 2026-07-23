@@ -1,0 +1,13 @@
+title: Gradient Descent
+slug: gradient-descent
+categories:
+  - Mathematics
+  - Machine Learning
+related:
+  - linear-algebra
+  - backpropagation
+  - neural-network
+tags:
+  - optimization
+  - training
+difficulty: Beginner

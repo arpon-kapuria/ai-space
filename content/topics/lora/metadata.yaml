@@ -1,0 +1,12 @@
+title: LoRA (Low-Rank Adaptation)
+slug: lora
+categories:
+  - Generative AI
+  - Machine Learning
+related:
+  - fine-tuning
+  - linear-algebra
+tags:
+  - peft
+  - efficiency
+difficulty: Advanced

@@ -1,0 +1,16 @@
+title: GPT
+slug: gpt
+categories:
+  - Natural Language Processing
+  - Generative AI
+  - Deep Learning
+related:
+  - transformer
+  - attention
+  - rlhf
+  - fine-tuning
+tags:
+  - decoder
+  - generation
+  - llm
+difficulty: Intermediate

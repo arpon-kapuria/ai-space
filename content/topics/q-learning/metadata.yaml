@@ -1,0 +1,10 @@
+title: Q-Learning
+slug: q-learning
+categories:
+  - Reinforcement Learning
+related:
+  - reinforcement-learning-intro
+tags:
+  - value-based
+  - rl
+difficulty: Intermediate

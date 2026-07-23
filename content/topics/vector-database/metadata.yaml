@@ -1,0 +1,12 @@
+title: Vector Database
+slug: vector-database
+categories:
+  - Production AI
+  - Generative AI
+related:
+  - embedding
+  - rag
+tags:
+  - infrastructure
+  - retrieval
+difficulty: Intermediate

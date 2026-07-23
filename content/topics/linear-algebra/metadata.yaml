@@ -1,0 +1,13 @@
+title: Linear Algebra for ML
+slug: linear-algebra
+categories:
+  - Mathematics
+related:
+  - gradient-descent
+  - neural-network
+  - embedding
+tags:
+  - vectors
+  - matrices
+  - math
+difficulty: Beginner
