@@ -1,6 +1,6 @@
 # AI-Dictionary
 
-> An Interactive knowledge Graph for AI Concepts
+> An Interactive Knowledge Graph for AI Concepts — **[[ai-dictionary]](https://ai-dictionary-vert.vercel.app/)**
 
 Modern AI knowledge is fragmented. Definitions live in one place, research papers in another, tutorials somewhere else, and the relationships between concepts are often left for you to figure out.
 
