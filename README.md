@@ -29,8 +29,6 @@
 
 </div>
 
----
-
 ## Motivation
 
 Modern AI knowledge is fragmented. Definitions live in one place, research papers in another, tutorials somewhere else, and the relationships between concepts are often left for you to figure out.
@@ -41,18 +39,19 @@ Whether you're revisiting the fundamentals of linear algebra, understanding why 
 
 This project is built for students, researchers, engineers, and anyone curious about artificial intelligence. It is open source, continuously evolving, and aims to provide a reliable reference that stays relevant as the AI ecosystem continues to evolve.
 
+**N.B:** This project is still under progress. You can find the list of topics to be covered [here](./docs/project-guide.md#topic-organization).
+
 ## What it does
 
 - **Interactive knowledge graph** — every AI concept is a node; every real relationship is an edge you can pan to, zoom into, and follow (GPU-rendered, smooth even with hundreds of nodes)
-- **Zero-code content** — concepts live as plain Markdown + YAML files; adding one requires no changes to app code
 - **Full-text search**, category filtering, light/dark theme, and a responsive layout that adapts the graph UI for mobile/tablet rather than just shrinking it
 
 ## Tech stack
 
-**App:** React 19 · TypeScript · Vite · Tailwind CSS 4 · Zustand
-**Graph:** PixiJS (WebGL rendering) · d3-force (layout physics) · GSAP (camera/hover motion)
-**Content:** react-markdown · remark-gfm · remark-math + KaTeX · Mermaid · Fuse.js (search)
-**Tooling:** Vitest · oxlint · GitHub Actions (CI) · Vercel (hosting/CD)
+- **App:** React 19 · TypeScript · Vite · Tailwind CSS 4 · Zustand
+- **Graph:** PixiJS (WebGL rendering) · d3-force (layout physics) · GSAP (camera/hover motion)
+- **Content:** react-markdown · remark-gfm · remark-math + KaTeX · Mermaid · Fuse.js (search)
+- **Tooling:** Vitest · oxlint · GitHub Actions (CI) · Vercel (hosting/CD)
 
 ## Contributing
 

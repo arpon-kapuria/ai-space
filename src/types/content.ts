@@ -48,7 +48,7 @@ export const CATEGORIES = [
   "Natural Language Processing",
   "Computer Vision",
   "Generative AI",
-  "Reinforcement Learning",
+  "LLM Engineering",
   "Production AI",
 ] as const;
 

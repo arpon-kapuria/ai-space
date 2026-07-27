@@ -230,7 +230,7 @@ TOPICS = {
     ),
     "rlhf": dict(
         title="RLHF (Reinforcement Learning from Human Feedback)",
-        categories=["Generative AI", "Reinforcement Learning"],
+        categories=["Generative AI", "LLM Engineering"],
         related=["gpt", "fine-tuning", "reinforcement-learning-intro"],
         tags=["alignment", "training"],
         difficulty="Advanced",
@@ -244,7 +244,7 @@ TOPICS = {
     ),
     "reinforcement-learning-intro": dict(
         title="Reinforcement Learning",
-        categories=["Reinforcement Learning", "Machine Learning"],
+        categories=["LLM Engineering", "Machine Learning"],
         related=["q-learning", "rlhf"],
         tags=["rl", "fundamentals"],
         difficulty="Beginner",
@@ -258,7 +258,7 @@ TOPICS = {
     ),
     "q-learning": dict(
         title="Q-Learning",
-        categories=["Reinforcement Learning"],
+        categories=["LLM Engineering"],
         related=["reinforcement-learning-intro"],
         tags=["value-based", "rl"],
         difficulty="Intermediate",

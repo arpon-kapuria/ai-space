@@ -2,7 +2,7 @@ title: RLHF (Reinforcement Learning from Human Feedback)
 slug: rlhf
 categories:
   - Generative AI
-  - Reinforcement Learning
+  - LLM Engineering
 related:
   - gpt
   - fine-tuning

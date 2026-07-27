@@ -13,7 +13,7 @@ const CATEGORY_COLORS_DARK: Record<Category, string> = {
   "Natural Language Processing": "#FF5C8A",
   "Computer Vision": "#FF8A3D",
   "Generative AI": "#B47CFF",
-  "Reinforcement Learning": "#4FD1C5",
+  "LLM Engineering": "#4FD1C5",
   "Production AI": "#B5BDC9",
 };
 
@@ -24,7 +24,7 @@ const CATEGORY_COLORS_LIGHT: Record<Category, string> = {
   "Natural Language Processing": "#FF2D55",
   "Computer Vision": "#FF6A00",
   "Generative AI": "#AF52DE",
-  "Reinforcement Learning": "#14B8A6",
+  "LLM Engineering": "#14B8A6",
   "Production AI": "#636366",
 };
 
