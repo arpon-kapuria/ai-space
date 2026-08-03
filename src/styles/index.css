@@ -150,11 +150,12 @@ body {
   letter-spacing: -0.01em;
 }
 .prose-note h2 {
-  margin-top: 2.25rem;
+  margin-top: 1rem;
   margin-bottom: 0.75rem;
   font-size: 1.375rem;
-  border-top: 1px solid var(--color-hairline);
+  /* border-top: 1px solid var(--color-hairline); */
   padding-top: 1.5rem;
+  font-weight: 500;
 }
 .prose-note h1 + h2 {
   border-top: none;
@@ -190,8 +191,18 @@ body {
 }
 .prose-note ul,
 .prose-note ol {
-  margin: 0 0 1rem 1.25rem;
+  margin: 1rem 0 1rem 1.25rem;
   color: color-mix(in srgb, var(--color-ink) 88%, transparent);
+}
+.prose-note li {
+  margin-bottom: 0.4rem;
+}
+.prose-note li:last-child {
+  margin-bottom: 0;
+}
+.prose-note li > ul,
+.prose-note li > ol {
+  margin-top: 0.4rem;
 }
 .prose-note ul {
   list-style: disc;
@@ -205,4 +216,90 @@ body {
   color: var(--color-ink-muted);
   font-style: italic;
   margin: 1rem 0;
+}
+
+.prose-note table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.9rem;
+}
+.prose-note th,
+.prose-note td {
+  border: 1px solid var(--color-hairline);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+.prose-note th {
+  background: var(--color-panel-raised);
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+.prose-note tr:nth-child(even) td {
+  background: color-mix(in srgb, var(--color-panel-raised) 40%, transparent);
+}
+
+/* Collapsible sections (e.g. "Math", written as <details><summary>) */
+.prose-note details {
+  border: 1px solid var(--color-hairline);
+  border-radius: 0.6rem;
+  padding: 0.1rem 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  background: var(--color-panel-raised);
+}
+.prose-note summary {
+  cursor: pointer;
+  padding: 0.75rem 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--color-ink);
+  list-style: none;
+}
+.prose-note summary::-webkit-details-marker {
+  display: none;
+}
+.prose-note summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: var(--color-starlight-dim);
+  transition: transform 0.15s ease;
+}
+.prose-note details[open] summary::before {
+  transform: rotate(90deg);
+}
+.prose-note details > *:not(summary) {
+  margin-top: 0.5rem;
+}
+
+/* Syntax highlighting (rehype-highlight) — mapped to the site's own
+   design tokens so it switches with dark/light mode automatically,
+   instead of importing a fixed highlight.js theme. */
+.hljs-keyword,
+.hljs-built_in,
+.hljs-type {
+  color: var(--color-starlight);
+}
+.hljs-string,
+.hljs-attr {
+  color: color-mix(in srgb, var(--color-ink) 75%, var(--color-starlight-dim));
+}
+.hljs-number,
+.hljs-literal {
+  color: var(--color-starlight-dim);
+}
+.hljs-comment {
+  color: var(--color-ink-faint);
+  font-style: italic;
+}
+.hljs-function,
+.hljs-title {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+.hljs-variable,
+.hljs-params {
+  color: var(--color-ink-muted);
 }

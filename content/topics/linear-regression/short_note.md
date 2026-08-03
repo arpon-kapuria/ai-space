@@ -1,0 +1,1 @@
+Linear regression predicts a continuous output as a weighted sum of the inputs, learnt by minimizing the squared difference between predictions and actual values. It's the simplest supervised model there is, and it's still the first thing worth trying on a new regression problem.

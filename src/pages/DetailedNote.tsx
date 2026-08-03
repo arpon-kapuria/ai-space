@@ -5,6 +5,8 @@ import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import rehypeSlug from "rehype-slug";
+import rehypeRaw from "rehype-raw";
+import rehypeHighlight from "rehype-highlight";
 import "katex/dist/katex.min.css";
 import {
   getPrevNext,
@@ -54,7 +56,7 @@ export function DetailedNote() {
       <div className="mx-auto max-w-2xl px-6 py-24 text-center">
         <p className="font-display text-lg text-ink">Topic not found</p>
         <p className="mt-2 text-sm text-ink-muted">
-          “{slug}” doesn't exist in the knowledge base yet.
+          "{slug}" doesn't exist in the knowledge base yet.
         </p>
         <Link
           to="/explore"
@@ -85,18 +87,6 @@ export function DetailedNote() {
             ← Back 
           </button>
 
-          <div className="flex flex-wrap items-center gap-2">
-            {topic.categories.map((cat) => (
-              <Link
-                key={cat}
-                to={`/explore/${encodeURIComponent(cat)}`}
-                className="rounded-full border border-hairline px-3 py-1 font-mono text-[10px] text-ink-muted hover:text-ink"
-              >
-                {cat}
-              </Link>
-            ))}
-          </div>
-
           <h1
             className="mt-4 font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl"
             style={{ textShadow: `0 0 40px ${color}22` }}
@@ -104,21 +94,50 @@ export function DetailedNote() {
             {topic.title}
           </h1>
 
-          <div className="mt-3 flex items-center gap-3 font-mono text-xs text-ink-muted">
+          <div className="mt-3 flex flex-wrap items-center gap-2 font-mono text-xs text-ink-muted">
             <span
+              className="font-medium"
               style={{ color: difficultyColor(topic.difficulty, theme) }}
             >
               {topic.difficulty}
             </span>
+
             <span>·</span>
-            <span>{topic.readingTime} min read</span>
+
+            <span className="flex items-center gap-1.5">
+              {topic.categories.map((cat, i) => (
+                <span key={cat} className="flex items-center gap-1.5">
+                  <Link
+                    to={`/explore/${encodeURIComponent(cat)}`}
+                    className="text-s font-medium hover:underline underline-offset-2"
+                  >
+                    {cat}
+                  </Link>
+                  {i < topic.categories.length - 1 && (
+                    <span className="text-ink-faint">,</span>
+                  )}
+                </span>
+              ))}
+            </span>
+
+            <span>·</span>
+
+            <span>⏱️ {topic.readingTime} min read</span>
           </div>
 
           <div className="prose-note mt-8 max-w-none">
             <ReactMarkdown
               remarkPlugins={[remarkGfm, remarkMath]}
-              rehypePlugins={[rehypeSlug, rehypeKatex]}
+              rehypePlugins={[rehypeRaw, rehypeSlug, rehypeKatex, rehypeHighlight]}
               components={{
+                a(props) {
+                  const { children, ...rest } = props;
+                  return (
+                    <a {...rest} target="_blank" rel="noopener noreferrer">
+                      {children}
+                    </a>
+                  );
+                },
                 code(props) {
                   const { className, children, ...rest } = props;
                   const match = /language-(\w+)/.exec(className || "");

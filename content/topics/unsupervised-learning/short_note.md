@@ -1,0 +1,1 @@
+Unsupervised learning finds structure in data that has no labels — grouping similar points together or discovering a simpler representation of the data — without ever being told the right answer.

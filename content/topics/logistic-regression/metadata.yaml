@@ -1,12 +1,11 @@
-title: Gradient Descent
-slug: gradient-descent
+title: Logistic Regression
+slug: logistic-regression
 categories:
   - Machine Learning
 related:
+  - linear-regression
   - supervised-learning
-  - loss-functions
-  - optimization-theory
 tags:
-  - optimization
+  - classification
   - fundamentals
 difficulty: Beginner

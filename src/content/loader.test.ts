@@ -36,7 +36,7 @@ describe("content loader", () => {
   });
 
   it("getTopic resolves a known slug and returns undefined for unknown ones", () => {
-    expect(getTopic("transformer")?.title).toBe("Transformer");
+    expect(getTopic("supervised-learning")?.title).toBe("Supervised Learning");
     expect(getTopic("does-not-exist")).toBeUndefined();
   });
 

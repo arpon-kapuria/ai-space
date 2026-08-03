@@ -1,0 +1,1 @@
+Logistic regression predicts the probability that an input belongs to a class by squashing a linear combination of the features through a sigmoid function. Despite the name, it's a classification model, not a regression one.

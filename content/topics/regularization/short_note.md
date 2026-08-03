@@ -1,0 +1,1 @@
+Regularization discourages a model's weights from growing too large by adding a penalty to the loss function. This reduces overfitting without changing the model's underlying structure.

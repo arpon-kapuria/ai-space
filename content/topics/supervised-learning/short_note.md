@@ -1,0 +1,1 @@
+Supervised learning trains a model on input-output pairs so it can predict the output for new, unseen inputs. It covers both regression, where the output is a continuous number, and classification, where the output is a category.

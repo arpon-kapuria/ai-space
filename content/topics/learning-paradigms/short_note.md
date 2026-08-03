@@ -1,0 +1,1 @@
+Machine learning problems are usually described by how much supervision the data provides — whether every example comes with a correct answer, none do, or something in between. Which paradigm you're working in decides what kind of question you can even ask of the data.

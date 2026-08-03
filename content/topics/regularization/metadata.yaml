@@ -1,0 +1,12 @@
+title: Regularization
+slug: regularization
+categories:
+  - Machine Learning
+related:
+  - supervised-learning
+  - bias-variance-tradeoff
+  - gradient-descent
+tags:
+  - regularization
+  - generalization
+difficulty: Beginner

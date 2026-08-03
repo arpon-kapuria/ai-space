@@ -12,7 +12,7 @@ export function Landing() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 42% 48% at 50% 45%, var(--color-void) 0%, var(--color-void) 35%, transparent 75%)",
+            "radial-gradient(ellipse 42% 48% at 50% 45%, var(--color-void) 0%, var(--color-void) 20%, transparent 75%)",
         }}
       />
 

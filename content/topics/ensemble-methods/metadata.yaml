@@ -1,0 +1,13 @@
+title: Ensemble Methods
+slug: ensemble-methods
+categories:
+  - Machine Learning
+related:
+  - supervised-learning
+  - decision-tree
+  - bias-variance-tradeoff
+tags:
+  - ensemble
+  - bagging
+  - boosting
+difficulty: Intermediate

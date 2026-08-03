@@ -1,0 +1,1 @@
+k-Nearest Neighbors predicts a point's label by looking at the k closest points in the training data and taking a majority vote. It doesn't learn a model at all — it just memorizes the data and compares at prediction time.

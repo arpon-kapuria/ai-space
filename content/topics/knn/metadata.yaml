@@ -1,0 +1,12 @@
+title: k-Nearest Neighbors
+slug: knn
+categories:
+  - Machine Learning
+related:
+  - supervised-learning
+  - dimensionality-reduction
+  - bias-variance-tradeoff
+tags:
+  - classification
+  - non-parametric
+difficulty: Beginner

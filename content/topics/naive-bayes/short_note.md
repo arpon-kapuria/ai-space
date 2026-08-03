@@ -1,0 +1,1 @@
+Naive Bayes classifies a point by using Bayes' theorem to estimate which class it most likely belongs to, assuming the features are independent given the class. That independence assumption is almost always technically wrong, but the model works surprisingly well anyway.

@@ -71,33 +71,43 @@ The **Motivation** section explains the limitations of previous approaches, why 
 
 ### Machine Learning
 
-- [ ] Learning Paradigms
-  - [ ] Supervised
-  - [ ] Unsupervised
-  - [ ] Semi-Supervised
-  - [ ] Self-Supervised (brief mention, links out)
-  - [ ] Reinforcement Learning (brief mention, links out)
-- [ ] Gradient Descent
-  - [ ] Batch / Stochastic / Mini-Batch GD
-  - [ ] Convergence Behavior (links to Mathematics' Optimization Theory)
-- [ ] Linear Regression
-- [ ] Logistic Regression
-- [ ] Bias-Variance Tradeoff
-  - [ ] Cross-Validation
-- [ ] Regularization
-  - [ ] L1 (Lasso)
-  - [ ] L2 (Ridge)
-  - [ ] Elastic Net
-- [ ] k-Nearest Neighbors
-  - [ ] Curse of Dimensionality
-- [ ] Naive Bayes
-- [ ] Decision Trees
-  - [ ] Gini / Entropy (Information Gain)
-- [ ] Ensemble Methods
-  - [ ] Bagging
-  - [ ] Random Forest
-  - [ ] Boosting (AdaBoost, Gradient Boosting)
-  - [ ] XGBoost / LightGBM
+- [x] Learning Paradigms
+  - [x] Supervised Learning
+  - [x] Unsupervised Learning
+  - [x] Semi-Supervised Learning
+  - [x] Self-Supervised Learning 
+  - [x] Reinforcement Learning 
+- [x] Supervised Learning
+- [x] Unsupervised Learning
+- [x] Semi-Supervised Learning
+- [x] Gradient Descent
+  - [x] Batch, Stochastic, Mini-batch
+  - [x] Convergence behavior (Optimization Theory)
+  - [ ] Code
+- [x] Linear Regression
+  - [ ] Code
+- [x] Logistic Regression
+  - [ ] Code
+- [x] Bias-Variance Tradeoff
+  - [x] Cross-Validation
+- [x] Regularization
+  - [x] L1 (Lasso)
+  - [x] L2 (Ridge)
+  - [x] Elastic Net
+  - [ ] Code
+- [x] k-Nearest Neighbors 
+  - [x] Curse of Dimensionality
+  - [ ] Code
+- [x] Naive Bayes 
+  - [ ] Code
+- [x] Decision Tree 
+  - [ ] Code
+- [x] Ensemble Methods
+  - [x] Bagging
+  - [x] Random Forest
+  - [x] Boosting (AdaBoost, Gradient Boosting) 
+  - [x] XGBoost / LightGBM
+  - [ ] Code
 - [ ] Support Vector Machines
   - [ ] Margin Maximization
   - [ ] Kernel Trick
@@ -330,13 +340,16 @@ The **Motivation** section explains the limitations of previous approaches, why 
   - [ ] Switch Transformer
   - [ ] Mixtral
   - [ ] Routing & Load Balancing
+- [ ] RL Foundations
+  - [ ] Policy / Reward / Advantage
+  - [ ] PPO Basics
 - [ ] Fine-Tuning (evolution overview)
   - [ ] Full Fine-Tuning
   - [ ] Feature-Based Transfer
   - [ ] Adapter Layers
   - [ ] LoRA / PEFT (brief — see own node)
   - [ ] Instruction Tuning / SFT (brief — see own node)
-  - [ ] RLHF / DPO (brief — see own node)
+  - [ ] Alignment - RLHF / DPO (brief — see own node)
 - [ ] LoRA & PEFT
   - [ ] LoRA
   - [ ] QLoRA
@@ -351,10 +364,8 @@ The **Motivation** section explains the limitations of previous approaches, why 
 - [ ] Instruction Tuning
   - [ ] SFT & Chat Formatting
   - [ ] Catastrophic Forgetting
-- [ ] RL Foundations
-  - [ ] Policy / Reward / Advantage
-  - [ ] PPO Basics
-- [ ] RLHF
+- [ ] Alignment
+  - [ ] RLHF
   - [ ] Reward Modeling
   - [ ] PPO Training Loop
   - [ ] Variations: DPO, GRPO, RLAIF

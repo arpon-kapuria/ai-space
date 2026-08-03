@@ -1,1 +1,1 @@
-The optimization algorithm that nudges model parameters downhill on a loss surface until they converge.
+Gradient descent finds a model's best parameters by repeatedly pushing them in the direction that reduces the loss the fastest. It's the iterative workhorse behind almost every model that doesn't have a simple closed-form solution.

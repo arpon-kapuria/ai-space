@@ -1,0 +1,1 @@
+A decision tree predicts by asking a sequence of simple yes/no questions about the features, splitting the data at each step to make the resulting groups as pure as possible. It's easy to read and explain, but prone to overfitting on its own.

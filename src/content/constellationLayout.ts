@@ -100,10 +100,10 @@ function computeLayout(): ConstellationLayout {
       "link",
       forceLink(links)
         .id((d: any) => d.id)
-        .distance(85)
-        .strength(0.35),
+        .distance(260)
+        .strength(0.15),
     )
-    .force("charge", forceManyBody().strength(-85))
+    .force("charge", forceManyBody().strength(-3000 / Math.max(nodes.length, 1)))
     .force("center", forceCenter(WIDTH / 2, HEIGHT / 2))
     .force(
       "collide",

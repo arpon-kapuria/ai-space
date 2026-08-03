@@ -1,0 +1,13 @@
+title: Decision Tree
+slug: decision-tree
+categories:
+  - Machine Learning
+related:
+  - supervised-learning
+  - bias-variance-tradeoff
+  - ensemble-methods
+tags:
+  - classification
+  - regression
+  - interpretability
+difficulty: Beginner

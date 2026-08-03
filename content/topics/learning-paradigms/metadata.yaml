@@ -1,0 +1,14 @@
+title: Learning Paradigms
+slug: learning-paradigms
+categories:
+  - Machine Learning
+related:
+  - supervised-learning
+  - unsupervised-learning
+  - semi-supervised-learning
+  - self-supervised-learning
+  - rl-foundations
+tags:
+  - fundamentals
+  - taxonomy
+difficulty: Beginner

@@ -1,0 +1,1 @@
+Semi-supervised learning trains on a small set of labeled examples together with a much larger pool of unlabeled ones, using the unlabeled data to shape the model's understanding of the underlying data distribution.

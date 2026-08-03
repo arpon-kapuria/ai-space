@@ -75,7 +75,8 @@ export function GraphSidebar() {
         >
           {topic.difficulty}
         </span>
-        <span>{topic.readingTime} min read</span>
+        <span>·</span>
+        <span>⏱️ {topic.readingTime} min read</span>
       </div>
 
       <Link

@@ -1,0 +1,1 @@
+The bias-variance tradeoff explains why a model can be wrong on new data in two fundamentally different ways: it can be too simple to capture the pattern (bias), or too sensitive to the specific training set it saw (variance). Reducing one usually increases the other.

@@ -1,0 +1,1 @@
+Ensemble methods combine many individually weak models into one stronger prediction, either by averaging independent models to cancel out their errors (bagging) or by training models one after another, each correcting the last one's mistakes (boosting).
