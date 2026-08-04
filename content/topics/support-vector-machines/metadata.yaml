@@ -1,0 +1,13 @@
+title: Support Vector Machines
+slug: support-vector-machines
+categories:
+  - Machine Learning
+related:
+  - supervised-learning
+  - logistic-regression
+  - regularization
+tags:
+  - classification
+  - regression
+  - margin-based
+difficulty: Intermediate

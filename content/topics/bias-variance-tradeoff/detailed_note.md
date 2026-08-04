@@ -37,4 +37,4 @@ This is the standard tool whenever a decision depends on knowing where you sit o
 
 ## Further reading
 
-The formal bias-variance decomposition as it's taught today, applied specifically to neural networks, was laid out by Stuart Geman, Elie Bienenstock, and René Doursat in "*Neural Networks and the Bias/Variance Dilemma* " (Neural Computation, 1992) — the paper that gave the tradeoff its modern name and framing, though the underlying statistical decomposition itself is older and appears throughout classical estimation theory.
+The formal bias-variance decomposition as it's taught today, applied specifically to neural networks, was laid out by Stuart Geman, Elie Bienenstock, and René Doursat in "Neural Networks and the Bias/Variance Dilemma" (Neural Computation, 1992) — the paper that gave the tradeoff its modern name and framing, though the underlying statistical decomposition itself is older and appears throughout classical estimation theory.

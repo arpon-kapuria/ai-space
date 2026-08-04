@@ -3,9 +3,9 @@ slug: regularization
 categories:
   - Machine Learning
 related:
-  - supervised-learning
   - bias-variance-tradeoff
   - gradient-descent
+  - evaluation-metrics
 tags:
   - regularization
   - generalization

@@ -66,5 +66,5 @@ The learning rate itself interacts with this: constant learning rates are rarely
 
 ## Further reading
 
-The general method of steepest descent is attributed to Augustin-Louis Cauchy (1847), applying it to solving systems of equations well before it had any connection to machine learning. The stochastic version has its own separate origin: Herbert Robbins and Sutton Monro's 1951 paper "*A Stochastic Approximation Method* " formalized the theory behind updating estimates from noisy, sequentially-arriving samples — the mathematical foundation SGD is built on.
+The general method of steepest descent is attributed to Augustin-Louis Cauchy (1847), applying it to solving systems of equations well before it had any connection to machine learning. The stochastic version has its own separate origin: Herbert Robbins and Sutton Monro's 1951 paper "A Stochastic Approximation Method" formalized the theory behind updating estimates from noisy, sequentially-arriving samples — the mathematical foundation SGD is built on.
 

@@ -51,4 +51,4 @@ Modern AI's most visible use of this idea isn't robotics or game-playing anymore
 
 ## Further reading
 
-This is a standard taxonomy covered in most machine learning textbooks rather than something introduced by a single paper — see Tom Mitchell's [Machine Learning (1997)](https://www.microsoft.com/en-us/research/wp-content/uploads/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) or Bishop's [Pattern Recognition and Machine Learning (2006)](https://www.microsoft.com/en-us/research/wp-content/uploads/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) for the classical treatment.
+This is a standard taxonomy covered in most machine learning textbooks rather than something introduced by a single paper — see Tom Mitchell's "Machine Learning" (1997) or Bishop's "Pattern Recognition and Machine Learning" (2006) for the classical treatment.

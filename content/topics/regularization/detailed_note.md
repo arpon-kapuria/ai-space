@@ -37,4 +37,4 @@ Regularization is a direct, practical answer to the variance half of the bias-va
 
 ## Further reading
 
-Ridge regression was introduced by Arthur Hoerl and Robert Kennard in "*Ridge Regression: Biased Estimation for Nonorthogonal Problems* " (1970). Lasso came later, introduced by Robert Tibshirani in "*Regression Shrinkage and Selection via the Lasso* " (1996). Elastic Net was introduced by Hui Zou and Trevor Hastie in 2005, specifically to combine the strengths of both.
+Ridge regression was introduced by Arthur Hoerl and Robert Kennard in "Ridge Regression: Biased Estimation for Nonorthogonal Problems" (1970). Lasso came later, introduced by Robert Tibshirani in "Regression Shrinkage and Selection via the Lasso" (1996). Elastic Net was introduced by Hui Zou and Trevor Hastie in 2005, specifically to combine the strengths of both.

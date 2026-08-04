@@ -43,4 +43,4 @@ For more than two classes, the natural extension is softmax regression (also cal
 
 ## Further reading
 
-The logistic (sigmoid) curve itself predates its use in classification by about a century — Pierre François Verhulst introduced it in the 1830s–40s to model constrained population growth. Its adoption as a regression method for binary outcomes is usually credited to David Cox's 1958 paper "*The Regression Analysis of Binary Sequences* ", which is the standard citation for logistic regression as a statistical technique.
+The logistic (sigmoid) curve itself predates its use in classification by about a century — Pierre François Verhulst introduced it in the 1830s–40s to model constrained population growth. Its adoption as a regression method for binary outcomes is usually credited to David Cox's 1958 paper "The Regression Analysis of Binary Sequences", which is the standard citation for logistic regression as a statistical technique.

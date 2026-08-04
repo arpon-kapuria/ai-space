@@ -95,4 +95,4 @@ A tree grown without limits fits the training data almost perfectly — and that
 
 ## Further reading
 
-The two classic algorithms are ID3, introduced by Ross Quinlan in "*Induction of Decision Trees* " (1986) — the source of the classic play-tennis example used above — and its successor C4.5, described in Quinlan's 1993 book of the same name. CART (Classification and Regression Trees), introduced by Leo Breiman, Jerome Friedman, Richard Olshen, and Charles Stone in their 1984 book, is the Gini-based approach most modern libraries implement by default.
+The two classic algorithms are ID3, introduced by Ross Quinlan in "Induction of Decision Trees" (1986) — the source of the classic play-tennis example used above — and its successor C4.5, described in Quinlan's 1993 book of the same name. CART (Classification and Regression Trees), introduced by Leo Breiman, Jerome Friedman, Richard Olshen, and Charles Stone in their 1984 book, is the Gini-based approach most modern libraries implement by default.

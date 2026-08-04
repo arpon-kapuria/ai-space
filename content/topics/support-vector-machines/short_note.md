@@ -1,0 +1,1 @@
+A Support Vector Machine finds the decision boundary that leaves the widest possible gap between classes, not just any boundary that separates them. With the kernel trick, it can draw that boundary even when the classes aren't separable by a straight line at all.

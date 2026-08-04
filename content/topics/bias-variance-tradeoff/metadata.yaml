@@ -3,7 +3,6 @@ slug: bias-variance-tradeoff
 categories:
   - Machine Learning
 related:
-  - supervised-learning
   - regularization
   - evaluation-metrics
   - hyperparameter-tuning

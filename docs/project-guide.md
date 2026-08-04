@@ -108,15 +108,14 @@ The **Motivation** section explains the limitations of previous approaches, why 
   - [x] Boosting (AdaBoost, Gradient Boosting) 
   - [x] XGBoost / LightGBM
   - [ ] Code
-- [ ] Support Vector Machines
-  - [ ] Margin Maximization
-  - [ ] Kernel Trick
-  - [ ] Soft Margin
-- [ ] Clustering
-  - [ ] k-Means
-  - [ ] Hierarchical
-  - [ ] DBSCAN
-  - [ ] Gaussian Mixture Models (GMM)
+- [x] Support Vector Machines
+  - [ ] Code
+- [x] Clustering
+  - [x] k-Means
+  - [x] Hierarchical
+  - [x] DBSCAN
+  - [x] Gaussian Mixture Models (GMM)
+  - [ ] Code
 - [ ] Dimensionality Reduction
   - [ ] PCA
   - [ ] t-SNE

@@ -46,4 +46,4 @@ For most modern models, "search for the hypothesis minimizing the loss" means [G
 
 ## Further reading
 
-There's no single paper credited with "inventing" supervised learning — it's the union of centuries-old statistical curve-fitting with a computational framework formalized gradually through the 20th century. The closest thing to a defining theoretical treatment is Vladimir Vapnik's [The Nature of Statistical Learning Theory](https://statisticalsupportandresearch.wordpress.com/wp-content/uploads/2017/05/vladimir-vapnik-the-nature-of-statistical-learning-springer-2010.pdf) (1995), which formalized empirical risk minimization and generalization bounds in the terms still used today.
+There's no single paper credited with "inventing" supervised learning — it's the union of centuries-old statistical curve-fitting with a computational framework formalized gradually through the 20th century. The closest thing to a defining theoretical treatment is Vladimir Vapnik's "The Nature of Statistical Learning Theory" (1995), which formalized empirical risk minimization and generalization bounds in the terms still used today.

@@ -37,4 +37,4 @@ These two get mixed up constantly, and the distinction is worth being precise ab
 
 ## Further reading
 
-Chapelle, Schölkopf, and Zien (eds.), [Semi-Supervised Learning](https://www.molgen.mpg.de/3659531/MITPress--SemiSupervised-Learning.pdf), MIT Press (2006) is the standard reference text that formalized the assumptions and methods described here — not a single founding paper, but the book most commonly cited as the field's defining treatment.
+Chapelle, Schölkopf, and Zien (eds.), "Semi-Supervised Learning", MIT Press (2006) is the standard reference text that formalized the assumptions and methods described here — not a single founding paper, but the book most commonly cited as the field's defining treatment.

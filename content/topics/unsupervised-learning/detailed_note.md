@@ -35,4 +35,4 @@ Unsupervised techniques aren't only a fallback for when you can't label data —
 
 ## Further reading
 
-Like supervised learning, this isn't traceable to one founding paper — clustering and density estimation both have roots in classical statistics well before "unsupervised learning" was common ML terminology. Hastie, Tibshirani, and Friedman's [The Elements of Statistical Learning](https://www.sas.upenn.edu/~fdiebold/NoHesitations/BookAdvanced.pdf) (2001) is the standard reference most people cite for a rigorous treatment of the classical methods (k-means, hierarchical clustering, PCA) covered here.
+Like supervised learning, this isn't traceable to one founding paper — clustering and density estimation both have roots in classical statistics well before "unsupervised learning" was common ML terminology. Hastie, Tibshirani, and Friedman's "The Elements of Statistical Learning" (2001) is the standard reference most people cite for a rigorous treatment of the classical methods (k-means, hierarchical clustering, PCA) covered here.

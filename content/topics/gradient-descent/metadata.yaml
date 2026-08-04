@@ -3,8 +3,9 @@ slug: gradient-descent
 categories:
   - Machine Learning
 related:
-  - supervised-learning
   - loss-functions
+  - optimization-theory
+  - gradient-instability
   - optimization-theory
 tags:
   - optimization

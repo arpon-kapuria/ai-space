@@ -1,0 +1,1 @@
+Clustering groups data points so that points in the same group are more similar to each other than to points in other groups, with no labels to guide it. Different clustering algorithms make different assumptions about what a "group" looks like, which is why there isn't just one clustering algorithm.
