@@ -1,0 +1,1 @@
+Feature engineering covers the practical work of turning raw, messy data into something a model can actually learn from well — scaling numbers, encoding categories, handling missing values, and correcting imbalanced classes. It often matters more for final performance than which model you pick.

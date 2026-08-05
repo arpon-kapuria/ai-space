@@ -6,13 +6,30 @@
 
 ## Bias and variance, defined
 
-- **Bias** is error from a model that's too simple. A straight line trying to fit a curved relationship has high bias — it's consistently wrong, no matter how much data you give it, because it just can't represent the real pattern. High bias looks like underfitting: bad performance on both training and test data.
-- **Variance** is error from a model that's too sensitive to its specific training set. A very flexible model — a deep decision tree with no depth limit, say — can fit the training data almost perfectly, noise included. Train it again on a different sample, and you'd get a noticeably different model. High variance looks like overfitting: great on training data, worse on test data.
+- **Bias** is error from a model that's too simple. A straight line trying to fit a curved relationship has high bias — it's consistently wrong, no matter how much data you give it, because it just can't represent the real pattern. High bias looks like **underfitting**: bad performance on both training and test data.
+- **Variance** is error from a model that's too sensitive to its specific training set. A very flexible model — a deep decision tree with no depth limit, say — can fit the training data almost perfectly, noise included. Train it again on a different sample, and you'd get a noticeably different model. High variance looks like **overfitting**: great on training data, worse on test data.
 - **Irreducible error** is just noise built into the problem. No model can predict it away, and it sets a floor on how low your error can go.
+
+## Underfitting and Overfitting
+
+Bias and variance are properties of the model itself, measured over many hypothetical retrainings. Underfitting and overfitting are what those properties look like in practice, on the one training run and one test set actually in front of you. They're the observable symptoms; bias and variance are the underlying condition.
+
+- **Underfitting** is the symptom of high bias. The model is too constrained to represent the real pattern, so it performs badly even on the data it was trained on — the training loss curve flattens out early, at a value that's still high. More training data doesn't help much, because the problem isn't a lack of examples, it's a lack of capacity. The fix is to move toward more complexity: add features, reduce regularization, use a more flexible model class, train longer if the model hasn't yet converged.
+- **Overfitting** is the symptom of high variance. The model has enough capacity to fit the training set's noise, not just its signal, so training performance keeps improving while test performance stalls or gets worse — the classic diverging train/test loss curves. The fix is to move toward less effective complexity: add [regularization](/topic/regularization), gather more training data (which makes noise harder to memorize), use a simpler model class, or stop training earlier.
+
+| | Underfitting (high bias) | Overfitting (high variance) |
+|---|---|---|
+| Training error | High | Low |
+| Test error | High | High |
+| Gap between them | Small | Large |
+| More data helps? | Not much | Usually, yes |
+| Typical fix | Increase model complexity | Increase regularization / simplify |
+
+Because they're symptoms of opposite causes, the fix for one tends to make the other worse if pushed too far — regularizing hard enough to cure overfitting can push a model back into underfitting, and removing constraints to cure underfitting can tip it into overfitting. That back-and-forth is the bias-variance tradeoff playing out in practice, which is why diagnosing *which one* you're looking at, before reaching for a fix, matters as much as fixing it.
 
 ## Why it's a tradeoff, not two independent knobs
 
-Model complexity is the dial that moves both. A simpler model (fewer parameters, more constraints, shallower tree) has less capacity to twist itself around the training data's noise — lower variance — but also less capacity to represent the real pattern if that pattern is genuinely complex — higher bias. A more complex model does the opposite. There's rarely a setting where you can drive both to zero simultaneously; the practical goal is finding the complexity level where their sum, plus the irreducible error, is smallest — not eliminating either one outright.
+Model complexity is the dial that moves both. A simpler model (fewer parameters, more constraints, shallower tree) has less capacity to twist itself around the training data's noise — lower variance, less overfitting risk — but also less capacity to represent the real pattern if that pattern is genuinely complex — higher bias, more underfitting risk. A more complex model does the opposite. There's rarely a setting where you can drive both to zero simultaneously; the practical goal is finding the complexity level where their sum, plus the irreducible error, is smallest — not eliminating either one outright.
 
 <details>
 <summary>Math: the formal decomposition</summary>
@@ -29,7 +46,7 @@ where $\text{Bias}[\hat{f}(x)] = \mathbb{E}[\hat{f}(x)] - f(x)$ is the gap betwe
 
 ## Cross-Validation
 
-Diagnosing where you sit on this tradeoff requires measuring generalization error — performance on data the model didn't train on — and a single train/test split is a noisy way to measure that, since the result depends heavily on which particular examples happened to land in the test set. Cross-validation makes that measurement more reliable by reusing the data more efficiently.
+Diagnosing where you sit on this tradeoff requires measuring generalization error — performance on data the model didn't train on — and a single train/test split is a noisy way to measure that, since the result depends heavily on which particular examples happened to land in the test set. Cross-validation makes that measurement more reliable by reusing the data more efficiently. It's also the practical tool for telling underfitting and overfitting apart: watching train and validation error side by side, rather than training error alone, is what reveals whether a gap is opening up between them.
 
 The standard version is **k-fold cross-validation**: split the training data into $k$ equal parts, train on $k-1$ of them and validate on the remaining one, then repeat $k$ times so every fold gets used as the validation set exactly once. Averaging the $k$ validation scores gives a much more stable estimate of generalization performance than any single split would, and it uses every example for both training and validation at some point, which matters when data is limited.
 

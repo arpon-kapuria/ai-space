@@ -1,4 +1,6 @@
+// src/content/loader.ts
 import { load as parseYaml } from "js-yaml";
+import readingOrderRaw from "../../docs/READING_ORDER.md?raw";
 import type {
   GraphEdge,
   GraphNode,
@@ -68,8 +70,38 @@ function buildTopics(): Map<string, Topic> {
 }
 
 export const TOPICS: Map<string, Topic> = buildTopics();
-export const ALL_TOPICS: Topic[] = Array.from(TOPICS.values()).sort((a, b) =>
-  a.title.localeCompare(b.title),
+
+// --- Curriculum order, parsed from the single reading-order file --------
+// docs/READING_ORDER.md is the single source of truth for topic order —
+// both the human-readable curriculum path and the sort key the app uses.
+// Lines starting with "#" (category headers, comments) and blank lines
+// are ignored; every other line is a topic slug, top to bottom = order.
+
+function parseReadingOrder(raw: string): string[] {
+  return raw
+    .split("\n")
+    .map((l) => l.trim())
+    .filter((l) => l && !l.startsWith("#"));
+}
+
+const READING_ORDER = parseReadingOrder(readingOrderRaw);
+const ORDER_INDEX = new Map<string, number>(
+  READING_ORDER.map((slug, i) => [slug, i]),
+);
+
+function orderIndexFor(slug: string): number {
+  const idx = ORDER_INDEX.get(slug);
+  if (idx === undefined) {
+    console.warn(
+      `[content] "${slug}" has a note but is missing from docs/READING_ORDER.md — showing it last.`,
+    );
+    return Number.POSITIVE_INFINITY;
+  }
+  return idx;
+}
+
+export const ALL_TOPICS: Topic[] = Array.from(TOPICS.values()).sort(
+  (a, b) => orderIndexFor(a.slug) - orderIndexFor(b.slug),
 );
 
 export function getTopic(slug: string): Topic | undefined {

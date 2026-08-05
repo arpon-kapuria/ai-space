@@ -53,3 +53,8 @@ Breaking these doesn't make the model useless, but it does mean the coefficients
 ## Further reading
 
 The method of least squares — the fitting criterion linear regression uses — was first published by Adrien-Marie Legendre in 1805. Carl Friedrich Gauss claimed to have been using the same method since 1795 and published his own account in 1809, which led to a real priority dispute between the two; most historical accounts today credit Legendre with the first publication and Gauss with independent, possibly earlier, use.
+
+## Practice
+
+- [`Linear Regression Using Normal Equation`](https://www.deep-ml.com/problems/14)
+- [`Linear Regression Using Gradient Descent`](https://www.deep-ml.com/problems/15)

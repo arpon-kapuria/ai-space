@@ -1,0 +1,1 @@
+Dimensionality reduction compresses data into fewer dimensions while trying to preserve what matters about it, either to fight the curse of dimensionality, feed a downstream model, or make it possible to actually visualize.

@@ -29,8 +29,8 @@ export function Landing() {
         </h1>
 
         <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-ink-muted md:text-lg">
-          AI-Dictionary is a visual reference for artificial intelligence. 
-          Every concept is a node. Every edge is a relationship.
+          AI-Dictionary is an Interactive Knowledge Graph for AI Concepts.
+          Every node is a concept. Every edge is a relationship.
         </p>
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">

@@ -1,0 +1,14 @@
+title: Evaluation Metrics
+slug: evaluation-metrics
+categories:
+  - Machine Learning
+related:
+  - feature-engineering
+  - hyperparameter-tuning
+  - ml-pipeline
+tags:
+  - classification
+  - regression
+  - model-performance
+  - fundamentals
+difficulty: Beginner

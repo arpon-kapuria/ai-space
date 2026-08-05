@@ -31,7 +31,9 @@ One section is common to every detailed note: **Motivation**.
 
 The **Motivation** section explains the limitations of previous approaches, why the current idea was introduced, and how it addresses those limitations. Starting every note with this section makes it easier to understand the evolution of ideas and quickly recall the intuition behind a concept without having to read the entire note.
 
-## Topic Organization
+## Topics to be Covered
+
+For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
 
 ### Mathematics
 
@@ -83,55 +85,75 @@ The **Motivation** section explains the limitations of previous approaches, why 
 - [x] Gradient Descent
   - [x] Batch, Stochastic, Mini-batch
   - [x] Convergence behavior (Optimization Theory)
-  - [ ] Code
+  - [ ] Practice
 - [x] Linear Regression
-  - [ ] Code
+  - [x] Practice
 - [x] Logistic Regression
-  - [ ] Code
-- [x] Bias-Variance Tradeoff
-  - [x] Cross-Validation
-- [x] Regularization
-  - [x] L1 (Lasso)
-  - [x] L2 (Ridge)
-  - [x] Elastic Net
-  - [ ] Code
+  - [ ] Practice
 - [x] k-Nearest Neighbors 
   - [x] Curse of Dimensionality
-  - [ ] Code
+  - [ ] Practice
 - [x] Naive Bayes 
-  - [ ] Code
+  - [ ] Practice
 - [x] Decision Tree 
-  - [ ] Code
+  - [ ] Practice
 - [x] Ensemble Methods
   - [x] Bagging
   - [x] Random Forest
   - [x] Boosting (AdaBoost, Gradient Boosting) 
   - [x] XGBoost / LightGBM
-  - [ ] Code
+  - [ ] Practice
 - [x] Support Vector Machines
-  - [ ] Code
+  - [ ] Practice
 - [x] Clustering
   - [x] k-Means
   - [x] Hierarchical
   - [x] DBSCAN
   - [x] Gaussian Mixture Models (GMM)
-  - [ ] Code
-- [ ] Dimensionality Reduction
-  - [ ] PCA
-  - [ ] t-SNE
-  - [ ] UMAP
-- [ ] Feature Engineering
-  - [ ] Scaling / Encoding
-  - [ ] Missing Data
-  - [ ] Class Imbalance (SMOTE, class weights)
-- [ ] Evaluation Metrics
-  - [ ] Precision / Recall / F1
-  - [ ] ROC-AUC vs PR-AUC
-  - [ ] Confusion Matrix
+  - [ ] Practice
+- [x] Dimensionality Reduction
+  - [x] PCA
+  - [x] t-SNE
+  - [x] UMAP
+  - [ ] Practice
+- [x] Feature Engineering
+  - [x] Scaling / Encoding
+  - [x] Missing Data
+  - [x] Class Imbalance (SMOTE, class weights)
+  - [ ] Practice
+- [ ] Loss Functions
+  - [ ] MSE / Huber Loss
+  - [ ] Binary Cross-Entropy vs. Categorical Cross-Entropy
+  - [ ] Hinge Loss
+  - [ ] KL Divergence
+- [x] Bias-Variance Tradeoff
+  - [x] Overfitting and Underfitting
+  - [x] Cross-Validation
+  - [ ] Practice
+- [x] Regularization
+  - [x] L1 (Lasso)
+  - [x] L2 (Ridge)
+  - [x] Elastic Net
+  - [ ] Practice
+- [ ] ML Pipeline
+  - [ ] Data Processing
+  - [ ] Model Training
+  - [ ] Evaluation
+  - [ ] Practice
 - [ ] Hyperparameter Tuning
   - [ ] Grid Search
   - [ ] Random Search
   - [ ] Bayesian Optimization
+  - [ ] Practice
+- [x] Evaluation Metrics
+  - [x] Classification and Regression
+  - [x] Confusion Matrix
+  - [x] Accuracy / Precision / Recall / F1
+  - [x] ROC-AUC vs PR-AUC
+  - [x] RMSE, MAE, R² score
+  - [x] Table comparison of when what to use
+  - [ ] Practice
+- [ ] ML Algorithm Selection Guide
 
 ### Deep Learning
 
@@ -142,11 +164,6 @@ The **Motivation** section explains the limitations of previous approaches, why 
   - [ ] Sigmoid / Tanh
   - [ ] ReLU / Leaky ReLU
   - [ ] GELU / Swish
-- [ ] Loss Functions
-  - [ ] MSE / Huber Loss
-  - [ ] Binary Cross-Entropy vs. Categorical Cross-Entropy
-  - [ ] Hinge Loss
-  - [ ] KL Divergence
 - [ ] Backpropagation
 - [ ] Gradient Instability
   - [ ] Vanishing Gradients
@@ -154,6 +171,10 @@ The **Motivation** section explains the limitations of previous approaches, why 
 - [ ] Weight Initialization
   - [ ] Xavier / Glorot
   - [ ] He Initialization
+- [ ] Normalization Techniques
+  - [ ] BatchNorm
+  - [ ] LayerNorm
+  - [ ] RMSNorm
 - [ ] Optimizers
   - [ ] SGD
   - [ ] Momentum
@@ -166,10 +187,6 @@ The **Motivation** section explains the limitations of previous approaches, why 
   - [ ] Cosine Annealing
   - [ ] Warmup
   - [ ] One-Cycle Policy
-- [ ] Normalization Techniques
-  - [ ] BatchNorm
-  - [ ] LayerNorm
-  - [ ] RMSNorm
 - [ ] Generalization Techniques
   - [ ] Dropout
   - [ ] Weight Decay

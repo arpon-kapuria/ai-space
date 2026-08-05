@@ -2,7 +2,7 @@
 
 # AI-Dictionary
 
-**An Interactive Knowledge Graph for AI Concepts. Every concept is a node & Every edge is a relationship.**
+**An Interactive Knowledge Graph for AI Concepts. Every node is a concept & Every edge is a relationship.**
 
 <br>
 
@@ -39,7 +39,7 @@ Whether you're revisiting the fundamentals of linear algebra, understanding why 
 
 This project is built for students, researchers, engineers, and anyone curious about artificial intelligence. It is open source, continuously evolving, and aims to provide a reliable reference that stays relevant as the AI ecosystem continues to evolve.
 
-**N.B:** This project is still under progress. You can find the list of topics to be covered [here](./docs/project-guide.md#topic-organization).
+**N.B:** This project is still under progress. You can find the list of topics to be covered [here](./docs/PROJECT_GUIDE.md#topic-organization) and for reading order, refer to this [file](./docs/READING_ORDER.md).
 
 ## What it does
 

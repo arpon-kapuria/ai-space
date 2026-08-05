@@ -1,0 +1,1 @@
+Evaluation metrics measure how well a trained model actually performs, translating raw predictions into numbers people care about. The right metric to use depends entirely on the cost of being wrong — some errors are far more expensive to make than others, and the choice of metric should reflect that rather than defaulting to the simplest one.

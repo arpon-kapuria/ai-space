@@ -3,6 +3,7 @@ slug: gradient-descent
 categories:
   - Machine Learning
 related:
+  - learning-paradigms
   - loss-functions
   - optimization-theory
   - gradient-instability
