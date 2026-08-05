@@ -52,3 +52,8 @@ The usual fixes are the same ones you'd reach for generally: reduce the number o
 ## Further reading
 
 The core idea is usually traced to a 1951 technical report by Evelyn Fix and Joseph Hodges, written for the US Air Force School of Aviation Medicine, though it wasn't formally published in a journal until decades later. Thomas Cover and Peter Hart's 1967 paper "Nearest Neighbor Pattern Classification" is the more commonly cited reference — it proved the classic result that, with enough data, the error rate of 1-NN is at most twice the theoretical best possible error rate.
+
+## Practice
+
+- [`Implement K-Nearest Neighbors`](https://www.deep-ml.com/problems/173)
+- [`Implement All Pairs Nearest Neighbor`](https://leetgpu.com/challenges/nearest-neighbor)

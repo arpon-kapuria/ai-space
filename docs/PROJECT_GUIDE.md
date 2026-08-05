@@ -92,7 +92,7 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [x] Practice
 - [x] k-Nearest Neighbors 
   - [x] Curse of Dimensionality
-  - [ ] Practice
+  - [x] Practice
 - [x] Naive Bayes 
   - [ ] Practice
 - [x] Decision Tree 
