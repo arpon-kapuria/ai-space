@@ -47,6 +47,5 @@ The logistic (sigmoid) curve itself predates its use in classification by about 
 
 ## Practice
 
-- [`Implement Logistic Regression`](https://leetgpu.com/challenges/logistic-regression)
 - [`Binary Classification with Logistic Regression`](https://www.deep-ml.com/problems/104)
 - [`Train Logistic Regression with Gradient Descent`](https://www.deep-ml.com/problems/106)
