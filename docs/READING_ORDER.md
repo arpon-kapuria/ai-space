@@ -19,22 +19,22 @@ supervised-learning
 unsupervised-learning
 semi-supervised-learning
 gradient-descent
+loss-functions
+bias-variance-tradeoff
 linear-regression
 logistic-regression
+support-vector-machines
 k-nearest-neighbors
 naive-bayes
 decision-tree
 ensemble-methods
-support-vector-machines
 clustering
 dimensionality-reduction
 feature-engineering
-loss-functions
-bias-variance-tradeoff
 regularization
-ml-pipeline
-hyperparameter-tuning
 evaluation-metrics
+hyperparameter-tuning
+ml-pipeline
 ml-algorithm-selection-guide
 
 # ===== Deep Learning =====
@@ -119,6 +119,7 @@ alignment
 prompt-engineering
 long-context-techniques
 rag
+vector-databases
 ai-agents-and-tool-use
 agentic-architectures
 gpt-family
@@ -138,7 +139,6 @@ ab-testing-and-online-evaluation
 hardware-for-ai
 gpu-programming
 distributed-training
-vector-databases
 model-compression
 model-sizing
 model-serving

@@ -1,0 +1,1 @@
+Hyperparameter tuning searches for the best settings for a model's non-learned knobs — things like tree depth, learning rate, or regularization strength — that gradient descent can't discover on its own. It matters because a good algorithm with badly-chosen hyperparameters can underperform a worse algorithm that's well tuned.

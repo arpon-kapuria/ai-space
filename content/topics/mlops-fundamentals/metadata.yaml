@@ -1,0 +1,17 @@
+title: MLOps Fundamentals
+slug: mlops-fundamentals
+categories:
+  - Production AI
+related:
+  - ml-pipeline
+  - data-versioning
+  - ci-cd-for-ml
+  - monitoring-and-observability
+  - ab-testing-and-online-evaluation
+  - model-serving
+  - inference-optimization
+tags:
+  - production
+  - deployment 
+  - monitoring
+difficulty: Advanced

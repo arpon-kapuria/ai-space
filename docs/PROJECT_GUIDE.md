@@ -86,10 +86,24 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [x] Batch, Stochastic, Mini-batch
   - [x] Convergence behavior (Optimization Theory)
   - [ ] Practice
+- [x] Loss Functions
+  - [x] MSE / MAE / RMSE / Huber Loss
+  - [x] Binary Cross-Entropy vs. Categorical Cross-Entropy
+  - [x] Hinge Loss
+  - [x] KL Divergence
+  - [x] Loss used in Production
+  - [x] Picking the right one
+  - [ ] Practice
+- [x] Bias-Variance Tradeoff
+  - [x] Overfitting and Underfitting
+  - [x] Cross-Validation
+  - [ ] Practice
 - [x] Linear Regression
   - [x] Practice
 - [x] Logistic Regression
   - [x] Practice
+- [x] Support Vector Machines
+  - [ ] Practice
 - [x] k-Nearest Neighbors 
   - [x] Curse of Dimensionality
   - [x] Practice
@@ -102,8 +116,6 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [x] Random Forest
   - [x] Boosting (AdaBoost, Gradient Boosting) 
   - [x] XGBoost / LightGBM
-  - [ ] Practice
-- [x] Support Vector Machines
   - [ ] Practice
 - [x] Clustering
   - [x] k-Means
@@ -121,29 +133,10 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [x] Missing Data
   - [x] Class Imbalance (SMOTE, class weights)
   - [ ] Practice
-- [ ] Loss Functions
-  - [ ] MSE / Huber Loss
-  - [ ] Binary Cross-Entropy vs. Categorical Cross-Entropy
-  - [ ] Hinge Loss
-  - [ ] KL Divergence
-- [x] Bias-Variance Tradeoff
-  - [x] Overfitting and Underfitting
-  - [x] Cross-Validation
-  - [ ] Practice
 - [x] Regularization
   - [x] L1 (Lasso)
   - [x] L2 (Ridge)
   - [x] Elastic Net
-  - [ ] Practice
-- [ ] ML Pipeline
-  - [ ] Data Processing
-  - [ ] Model Training
-  - [ ] Evaluation
-  - [ ] Practice
-- [ ] Hyperparameter Tuning
-  - [ ] Grid Search
-  - [ ] Random Search
-  - [ ] Bayesian Optimization
   - [ ] Practice
 - [x] Evaluation Metrics
   - [x] Classification and Regression
@@ -153,7 +146,14 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [x] RMSE, MAE, R² score
   - [x] Table comparison of when what to use
   - [ ] Practice
-- [ ] ML Algorithm Selection Guide
+- [x] Hyperparameter Tuning
+  - [x] Grid Search
+  - [x] Random Search
+  - [x] Bayesian Optimization
+  - [ ] Practice
+- [x] ML Pipeline
+  - [ ] Practice
+- [x] ML Algorithm Selection Guide
 
 ### Deep Learning
 
@@ -401,6 +401,10 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [ ] Advanced RAG (Query Rewriting, Re-ranking, HyDE, RAG-Fusion)
   - [ ] Agentic / Adaptive RAG (Self-RAG, Corrective RAG, GraphRAG)
   - [ ] RAG Evaluation
+- [ ] Vector Databases
+  - [ ] HNSW / IVF Indexing
+  - [ ] Metadata Filtering
+  - [ ] Popular Systems (Pinecone, Weaviate, Qdrant, pgvector)
 - [ ] AI Agents & Tool Use
   - [ ] Tool / Function Calling
   - [ ] Memory Systems
@@ -439,10 +443,11 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
 ### Production AI
 
 <!-- MLOps Foundations -->
-- [ ] MLOps Fundamentals
-  - [ ] ML Lifecycle (Data → Train → Deploy → Monitor → Retrain)
-  - [ ] Data Drift vs. Concept Drift
-  - [ ] Training-Serving Skew
+- [x] MLOps Fundamentals
+  - [x] ML Pipeline 
+  - [x] Data Drift vs. Concept Drift
+  - [x] Training-Serving Skew
+  - [x] Rest of the topics
 - [ ] Data Versioning
   - [ ] DVC
   - [ ] Experiment Tracking (MLflow, Weights & Biases)
@@ -476,10 +481,6 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [ ] Pipeline Parallelism
   - [ ] Sequence Parallelism
   - [ ] ZeRO / Fully Sharded Data Parallel (FSDP)
-- [ ] Vector Databases
-  - [ ] HNSW / IVF Indexing
-  - [ ] Metadata Filtering
-  - [ ] Popular Systems (Pinecone, Weaviate, Qdrant, pgvector)
 
 <!-- Model Compression & Efficiency -->
 - [ ] Model Compression

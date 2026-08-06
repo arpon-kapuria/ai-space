@@ -210,7 +210,7 @@ export function DetailedNote() {
         </article>
 
         {toc.length > 0 && (
-          <nav className="sticky top-10 hidden w-52 shrink-0 self-start lg:block">
+          <nav className="sticky top-10 hidden w-48 shrink-0 self-start lg:block">
             <p className="font-mono text-[10px] uppercase tracking-wide text-ink-faint">
               On this page
             </p>

@@ -1,0 +1,1 @@
+MLOps is the discipline of keeping a trained model reliable after it's deployed — versioning data and experiments, automating retraining and deployment, and monitoring for drift so a model that worked on day one doesn't silently degrade by day ninety.

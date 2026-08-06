@@ -1,0 +1,1 @@
+A loss function measures how wrong a machine learning model's predictions are by calculating the difference between the predicted output and the actual true value. It acts as a scorekeeper and guide, telling the model how to adjust its internal parameters to improve accuracy over time.

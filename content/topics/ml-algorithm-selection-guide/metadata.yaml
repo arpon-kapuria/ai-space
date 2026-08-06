@@ -1,0 +1,13 @@
+title: ML Algorithm Selection Guide
+slug: ml-algorithm-selection-guide
+categories:
+  - Machine Learning
+related:
+  - ml-pipeline
+  - bias-variance-tradeoff
+  - evaluation-metrics
+  - learning-paradigms
+tags:
+  - ml-algorithm-selection
+  - fundamentals
+difficulty: Advanced

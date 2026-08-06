@@ -1,0 +1,1 @@
+The ML pipeline is the end-to-end sequence of steps that turns a raw problem into a trained, evaluated model — framing the problem, preparing data, training, tuning, and evaluating, in that rough order. Almost every topic covered elsewhere in this section is a piece of this larger workflow.
