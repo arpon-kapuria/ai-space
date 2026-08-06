@@ -58,3 +58,11 @@ This is the same shape of tradeoff as [regularization](/topic/regularization)'s 
 ## Further reading
 
 The margin-based, maximum-margin idea traces back to the statistical learning theory developed by Vladimir Vapnik and Alexey Chervonenkis from the 1960s onward. The kernel trick's application to margin classifiers was introduced by Bernhard Boser, Isabelle Guyon, and Vapnik in "A Training Algorithm for Optimal Margin Classifiers" (1992). The soft-margin formulation used almost universally today comes from Corinna Cortes and Vladimir Vapnik's "Support-Vector Networks" (1995).
+
+## Practice
+
+- [`Implement Linear Kernel Function`](https://www.deep-ml.com/problems/45)
+- [`Implement Polynomial Kernel Function`](https://www.deep-ml.com/problems/281)
+- [`Implement Sigmoid Kernel Function`](https://www.deep-ml.com/problems/815)
+- [`Implement RBF (Gaussian) Kernel Function`](https://www.deep-ml.com/problems/280)
+- [`Pegasos Kernel SVM Implementation`](https://www.deep-ml.com/problems/21)

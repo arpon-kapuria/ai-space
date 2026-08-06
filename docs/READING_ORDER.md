@@ -23,8 +23,8 @@ loss-functions
 bias-variance-tradeoff
 linear-regression
 logistic-regression
-support-vector-machines
 k-nearest-neighbors
+support-vector-machines
 naive-bayes
 decision-tree
 ensemble-methods
