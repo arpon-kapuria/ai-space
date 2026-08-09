@@ -108,9 +108,9 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [x] Curse of Dimensionality
   - [x] Practice
 - [x] Naive Bayes 
-  - [ ] Practice
+  - [x] Practice
 - [x] Decision Tree 
-  - [ ] Practice
+  - [x] Practice
 - [x] Ensemble Methods
   - [x] Bagging
   - [x] Random Forest

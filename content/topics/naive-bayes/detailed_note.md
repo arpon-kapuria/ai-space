@@ -56,3 +56,9 @@ Naive Bayes is fast to train, fast to predict, and needs relatively little data 
 ## Further reading
 
 Bayes' theorem itself comes from Thomas Bayes, published posthumously in 1763. The naive independence-assumption classifier built on it doesn't trace to one specific paper — it's a natural, old application of the theorem that shows up across pattern recognition and text classification literature from the 1960s onward, well before "Naive Bayes" became the standard name for it.
+
+## Practice
+
+- [`Bernoulli Naive Bayes Classifier`](https://www.deep-ml.com/problems/140)
+- [`Gaussian Naive Bayes Classifier`](https://www.deep-ml.com/problems/261)
+- [`Multinomial Naive Bayes Classifier`](https://www.deep-ml.com/problems/817)
