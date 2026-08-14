@@ -143,8 +143,7 @@ local-and-edge-inference
 request-lifecycle
 batching-strategies
 kv-cache
-prefill
-decode
+prefill-vs-decode
 speculative-decoding
 caching
 llm-cost-and-pricing

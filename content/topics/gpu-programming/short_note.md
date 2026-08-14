@@ -1,0 +1,1 @@
+GPU programming is writing code that maps directly onto a GPU's thread/block/grid structure and memory hierarchy, since a framework like PyTorch can only go so fast before custom kernels are needed to actually use the hardware efficiently. It matters because two mathematically identical GPU programs can differ in speed by 10x or more, purely based on how memory is accessed.

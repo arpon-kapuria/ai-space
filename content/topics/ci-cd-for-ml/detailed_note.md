@@ -41,5 +41,4 @@ Together, a testing pipeline decides whether a model is *good enough to try*, a 
 
 ## Further reading
 
-- [Google Cloud: MLOps — Continuous delivery and automation pipelines in machine learning](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
-- [Martin Fowler: BlueGreenDeployment](https://martinfowler.com/bliki/BlueGreenDeployment.html)
+[Google Cloud's guide to MLOps continuous delivery and automation pipelines](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning) covers the testing-and-registry workflow in more depth, and [Martin Fowler's write-up on Blue-Green Deployment](https://martinfowler.com/bliki/BlueGreenDeployment.html) is the standard reference for that deployment pattern. 

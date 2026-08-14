@@ -1,0 +1,1 @@
+Distributed training splits a model, its data, or both across many GPUs, because modern models are too large to fit in one GPU's memory or too slow to train on one GPU in reasonable time. Different parallelism strategies split different parts of the problem — the data, the layers, or the parameters themselves — each with its own communication cost.

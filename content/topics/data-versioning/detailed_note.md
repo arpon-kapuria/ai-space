@@ -48,6 +48,4 @@ Between DVC (data), experiment tracking (runs and results), and a pinned environ
 
 ## Further reading
 
-- [DVC Documentation](https://dvc.org/doc)
-- [MLflow Documentation](https://mlflow.org/docs/latest/index.html)
-- Weights & Biases: [Experiment Tracking Guide](https://docs.wandb.ai/guides/track)
+The [DVC documentation](https://dvc.org/doc) and [MLflow documentation](https://mlflow.org/docs/latest/index.html) are the best starting points for the two tools covered above, and Weights & Biases' [Experiment Tracking Guide](https://docs.wandb.ai/guides/track) covers the same workflow on that platform.

@@ -1,0 +1,1 @@
+Hardware for AI is about why GPUs (and TPUs) replaced CPUs for deep learning — they trade a few powerful cores for thousands of simple ones built for the same operation, matrix multiplication, done in parallel over and over. Which chip actually helps depends on memory bandwidth and how fast data can move between chips, not just raw compute.

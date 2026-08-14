@@ -99,6 +99,4 @@ Monitoring answers "is something wrong right now." It doesn't decide whether a *
 
 ## Further reading
 
-- [Google SRE Book: Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/)
-- [Evidently AI: Machine Learning Monitoring](https://www.evidentlyai.com/ml-in-production/model-monitoring)
-- [OpenTelemetry Documentation](https://opentelemetry.io/docs/)
+The [Google SRE Book's chapter on Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/) is the standard reference for the system-metrics layer, [Evidently AI's guide to ML monitoring](https://www.evidentlyai.com/ml-in-production/model-monitoring) covers the drift and data-quality layers in more depth, and the [OpenTelemetry documentation](https://opentelemetry.io/docs/) covers the tracing standard referenced above.

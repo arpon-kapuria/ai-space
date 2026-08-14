@@ -1,0 +1,14 @@
+title: Distributed Training
+slug: distributed-training
+categories:
+  - Production AI
+related:
+  - hardware-for-ai
+  - gpu-programming
+  - model-sizing
+  - mixture-of-experts
+tags:
+  - distributed-systems
+  - training
+  - parallelism
+difficulty: Advanced

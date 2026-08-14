@@ -1,0 +1,14 @@
+title: Hardware for AI
+slug: hardware-for-ai
+categories:
+  - Production AI
+related:
+  - gpu-programming
+  - distributed-training
+  - model-sizing
+  - model-serving
+tags:
+  - hardware
+  - infrastructure
+  - gpu
+difficulty: Intermediate

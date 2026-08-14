@@ -444,21 +444,23 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
 ### Production AI
 
 <!-- Infrastructure & Hardware -->
-- [ ] Hardware for AI
-  - [ ] GPUs vs. CPUs vs. TPUs
-  - [ ] Memory Bandwidth & Compute Bottlenecks
-  - [ ] Interconnects (NVLink, InfiniBand)
-- [ ] GPU Programming
-  - [ ] CUDA Programming Model (Threads, Blocks, Grids, Warps)
-  - [ ] Memory Hierarchy (Global / Shared / Register Memory, Coalescing)
-  - [ ] Kernel Fusion (links to FlashAttention under Inference Optimization)
-  - [ ] Triton (OpenAI Kernel Language — Python-Level Custom Kernels)
-- [ ] Distributed Training
-  - [ ] Data Parallelism
-  - [ ] Tensor Parallelism
-  - [ ] Pipeline Parallelism
-  - [ ] Sequence Parallelism
-  - [ ] ZeRO / Fully Sharded Data Parallel (FSDP)
+- [x] Hardware for AI
+  - [x] GPUs vs. CPUs vs. TPUs
+  - [x] Memory Bandwidth & Compute Bottlenecks
+  - [x] Interconnects (NVLink, InfiniBand)
+- [x] GPU Programming
+  - [x] CUDA Programming Model (Kernel, Threads, Blocks, Grids, Warps)
+  - [x] Memory Hierarchy (Global / Shared / Register Memory, Coalescing)
+  - [x] Kernel Fusion (links to FlashAttention under Inference Optimization)
+  - [x] The Actual Tech Stack (cuBLAS / cuDNN, Triton, Raw CUDA, CUTLASS)
+- [x] Distributed Training
+  - [x] Data Parallelism
+  - [x] Tensor Parallelism
+  - [x] Pipeline Parallelism
+  - [x] Sequence Parallelism
+  - [x] ZeRO / Fully Sharded Data Parallel (FSDP)
+  - [x] 3D Parallelism
+  - [x] Which Strategy Solves Which Problem
 
 <!-- Model Compression & Efficiency -->
 - [ ] Model Compression
@@ -504,10 +506,9 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [ ] Why It Grows Linearly with Sequence Length
   - [ ] Multi-Query Attention (MQA)
   - [ ] Grouped-Query Attention (GQA)
-- [ ] Prefill
-  - [ ] Compute-Bound Phase, Parallel over Prompt Tokens
-- [ ] Decode
-  - [ ] Memory-Bound Phase, Sequential Token Generation
+- [ ] Prefill vs Decode
+  - [ ] Prefill (Compute-Bound Phase, Parallel over Prompt Tokens)
+  - [ ] Decode (Memory-Bound Phase, Sequential Token Generation)
 - [ ] Speculative Decoding
   - [ ] Draft Model + Verification
   - [ ] Medusa / Lookahead Decoding

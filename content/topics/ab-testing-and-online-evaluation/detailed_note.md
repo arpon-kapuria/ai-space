@@ -69,6 +69,4 @@ Shadow deployment de-risks "does it even work" with zero user exposure. A/B test
 
 ## Further reading
 
-- [Kohavi, Tang & Xu — *Trustworthy Online Controlled Experiments*, Cambridge University Press, 2020](https://www.cambridge.org/core/books/trustworthy-online-controlled-experiments/D97B26382EB0EB2DC2019A7A7B518F59)
-- [Google: Overlapping Experiment Infrastructure — More, Better, Faster Experimentation](https://research.google/pubs/overlapping-experiment-infrastructure-more-better-faster-experimentation/)
-- [Chapelle, Joachims, Radlinski & Yue — Large-Scale Validation and Analysis of Interleaved Search Evaluation, 2012](https://dl.acm.org/doi/10.1145/2229179.2229181)
+Kohavi, Tang & Xu's book [*Trustworthy Online Controlled Experiments*](https://www.cambridge.org/core/books/trustworthy-online-controlled-experiments/D97B26382EB0EB2DC2019A7A7B518F59) is the standard reference for everything on A/B Testing, Google's paper on [overlapping experiment infrastructure](https://research.google/pubs/overlapping-experiment-infrastructure-more-better-faster-experimentation/) covers how large-scale experimentation platforms are actually built, and [Chapelle, Joachims, Radlinski & Yue's paper on interleaved search evaluation](https://dl.acm.org/doi/10.1145/2229179.2229181) is the reference for the interleaving technique.
