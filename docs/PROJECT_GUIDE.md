@@ -385,6 +385,7 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [ ] Reward Modeling
   - [ ] PPO Training Loop
   - [ ] Variations: DPO, GRPO, RLAIF
+
 <!-- Phase 2: Building With the Model -->
 - [ ] Prompt Engineering
   - [ ] Zero-Shot / Few-Shot
@@ -441,29 +442,6 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [ ] Red-Teaming
 
 ### Production AI
-
-<!-- MLOps Foundations -->
-- [x] MLOps Fundamentals
-  - [x] ML Pipeline 
-  - [x] Data Drift vs. Concept Drift
-  - [x] Training-Serving Skew
-  - [x] Rest of the topics
-- [ ] Data Versioning
-  - [ ] DVC
-  - [ ] Experiment Tracking (MLflow, Weights & Biases)
-  - [ ] Data Lineage
-  - [ ] Reproducible Environments
-- [ ] CI/CD for ML
-  - [ ] Testing Pipelines
-  - [ ] Model Registries
-  - [ ] Canary / Blue-Green Deployment
-- [ ] Monitoring & Observability
-  - [ ] Drift Detection
-  - [ ] Logging & Tracing
-  - [ ] LLM-Specific Observability (Prompt/Response Logging, Token Usage)
-- [ ] A/B Testing & Online Evaluation
-  - [ ] Shadow Deployment
-  - [ ] Champion / Challenger
 
 <!-- Infrastructure & Hardware -->
 - [ ] Hardware for AI
@@ -538,13 +516,44 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [ ] Prefix Caching (RadixAttention)
   - [ ] Response Caching
 
-<!-- System Design -->
-- [ ] System Design
-  - [ ] ML System Design (Data Pipelines, Recommendation/Fraud/Search Case Studies)
-  - [ ] Modern AI System Design (RAG Pipelines, Agentic Systems, LLM Serving at Scale)
-
 <!-- Cost & Economics -->
 - [ ] LLM Cost & Pricing
   - [ ] Token-Based API Pricing
   - [ ] Input/Output Cost Asymmetry
   - [ ] Cost Optimization Levers (Routing, Caching, Batching)
+
+<!-- MLOps Foundations -->
+- [x] MLOps Fundamentals
+  - [x] ML Pipeline 
+  - [x] Data Drift vs. Concept Drift
+  - [x] Training-Serving Skew
+  - [x] Rest of the topics
+- [x] Data Versioning
+  - [x] DVC
+  - [x] Experiment Tracking (MLflow, Weights & Biases)
+  - [x] Data Lineage
+  - [x] Reproducible Environments
+- [x] CI/CD for ML
+  - [x] Testing Pipelines
+  - [x] Model Registries
+  - [x] Canary / Blue-Green Deployment
+- [x] Monitoring & Observability
+  - [x] Why ML Monitoring Isn't Just SWE Monitoring
+  - [x] What Gets Tracked in Production
+  - [x] Frameworks & Tools, by What They're For
+  - [x] Logging & Tracing
+  - [x] LLM-Specific Observability
+- [x] A/B Testing & Online Evaluation
+  - [x] A/B Testing
+  - [x] What Has to Be Decided Before Running One
+  - [x] Common Pitfalls
+  - [x] Shadow Deployment
+  - [x] Champion / Challenger
+  - [x] Multi-Armed Bandits
+  - [x] Interleaving (Search & Ranking)
+  - [x] Online Evaluation for LLMs
+
+<!-- System Design -->
+- [ ] System Design
+  - [ ] ML System Design (Data Pipelines, Recommendation/Fraud/Search Case Studies)
+  - [ ] Modern AI System Design (RAG Pipelines, Agentic Systems, LLM Serving at Scale)

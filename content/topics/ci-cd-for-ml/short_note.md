@@ -1,0 +1,1 @@
+CI/CD for ML extends traditional software CI/CD with steps regular software doesn't need — testing the data and the model itself, not just the code — so a retrained model can move from training to production safely and repeatably.

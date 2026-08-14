@@ -1,0 +1,1 @@
+Monitoring & Observability is the always-on system that watches a deployed model in production — tracking drift, logging what went in and out of every request, and for LLMs specifically, watching prompts, responses, and token spend. It's what turns "the model might be degrading" from a guess into something you can actually see.

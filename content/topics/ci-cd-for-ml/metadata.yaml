@@ -1,0 +1,14 @@
+title: CI/CD for ML
+slug: ci-cd-for-ml
+categories:
+  - Production AI
+related:
+  - mlops-fundamentals
+  - data-versioning
+  - monitoring-and-observability
+  - ab-testing-and-online-evaluation
+tags:
+  - deployment
+  - testing
+  - automation
+difficulty: Intermediate

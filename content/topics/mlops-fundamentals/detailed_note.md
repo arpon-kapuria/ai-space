@@ -6,7 +6,7 @@
 
 This note covers the two failure modes that make MLOps necessary in the first place — a deployed model doesn't stay accurate forever, and it can even go wrong on day one if the pipeline serving it isn't built carefully. Everything that follows in Production (versioning, CI/CD, monitoring infrastructure, deployment strategies) exists to catch and fix these two problems at scale; this is the "why" before the "how."
 
-## 1. Training-Serving Skew
+## Training-Serving Skew
 
 **Training-serving skew** is when the features a model sees in production are computed differently from how they were computed during training — same feature name, different actual values. It's one of the most common (and most silent) ways a model underperforms right after launch, even though nothing about the model itself is wrong.
 
@@ -17,7 +17,7 @@ Typical causes:
 
 The fix is architectural, not statistical: reuse the *exact same* feature computation code (or the exact same `Pipeline`/`ColumnTransformer` object, as in [ML Pipeline](/topic/ml-pipeline)) for both training and serving, rather than reimplementing it twice. A **feature store** formalizes this — a system that computes and serves features consistently for both training (offline) and inference (online). Feast/Tecton-style feature stores, and the broader question of how a model actually gets served, are covered under Model Serving.
 
-## 2. Data Drift vs. Concept Drift
+## Data Drift vs. Concept Drift
 
 Training-serving skew is a bug you can fix once. Drift is different — it's the data itself changing over time, so even a perfectly-built pipeline degrades eventually. Both drift types describe a model getting worse without any code change, but the cause differs, which matters because the fix differs too.
 

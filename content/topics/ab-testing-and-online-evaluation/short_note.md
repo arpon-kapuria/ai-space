@@ -1,0 +1,1 @@
+A/B testing and online evaluation decide, using real production traffic, whether a new model is actually better than the one currently live — since a model that wins offline on a test set doesn't always win on real users. It's the last checkpoint before a challenger model fully replaces the champion.

@@ -1,0 +1,1 @@
+Data versioning means tracking which exact dataset, code, and hyperparameters produced a given model, the same way Git tracks which exact code produced a given build. Without it, "reproduce last month's model" becomes a guessing game.

@@ -207,6 +207,7 @@ body {
 }
 .prose-note ul {
   list-style: disc;
+  padding-left: 1rem;
 }
 .prose-note ol {
   list-style: decimal;

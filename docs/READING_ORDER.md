@@ -131,11 +131,6 @@ llm-evaluation
 llm-safety-and-security
 
 # ===== Production AI =====
-mlops-fundamentals
-data-versioning
-ci-cd-for-ml
-monitoring-and-observability
-ab-testing-and-online-evaluation
 hardware-for-ai
 gpu-programming
 distributed-training
@@ -152,5 +147,10 @@ prefill
 decode
 speculative-decoding
 caching
-system-design
 llm-cost-and-pricing
+mlops-fundamentals
+data-versioning
+ci-cd-for-ml
+monitoring-and-observability
+ab-testing-and-online-evaluation
+system-design
