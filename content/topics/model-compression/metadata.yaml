@@ -1,0 +1,16 @@
+title: Model Compression
+slug: model-compression
+categories:
+  - Production AI
+related:
+  - hardware-for-ai
+  - parameter-and-memory-estimation
+  - distributed-training
+  - model-serving
+  - inference-optimization
+tags:
+  - quantization
+  - pruning
+  - distillation
+  - efficiency
+difficulty: Intermediate

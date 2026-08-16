@@ -112,7 +112,7 @@ pretraining
 mixture-of-experts
 rl-foundations
 fine-tuning
-lora-and-peft
+peft
 embedding-fine-tuning
 instruction-tuning
 alignment
@@ -135,7 +135,7 @@ hardware-for-ai
 gpu-programming
 distributed-training
 model-compression
-model-sizing
+parameter-and-memory-estimation
 model-serving
 inference-optimization
 multi-lora-serving

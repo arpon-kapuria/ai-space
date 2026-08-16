@@ -104,7 +104,7 @@ Real large-model training runs almost never use just one of the strategies above
 
 ## Where this fits
 
-Distributed training is what turns the hardware and interconnects from [Hardware for AI](/topic/hardware-for-ai), and the kernel-level efficiency from [GPU Programming](/topic/gpu-programming), into the ability to train a model too large or too slow for any single GPU. Which combination makes sense for a given model connects directly to its parameter count and the resulting memory footprint — covered concretely under Model Sizing.
+Distributed training is what turns the hardware and interconnects from [Hardware for AI](/topic/hardware-for-ai), and the kernel-level efficiency from [GPU Programming](/topic/gpu-programming), into the ability to train a model too large or too slow for any single GPU. Which combination makes sense for a given model connects directly to its parameter count and the resulting memory footprint — covered concretely under [Parameter & Memory Estimation](/topic/parameter-and-memory-estimation).
 
 ## Further reading
 

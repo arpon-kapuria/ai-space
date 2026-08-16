@@ -5,7 +5,7 @@ categories:
 related:
   - gpu-programming
   - distributed-training
-  - model-sizing
+  - parameter-and-memory-estimation
   - model-serving
 tags:
   - hardware

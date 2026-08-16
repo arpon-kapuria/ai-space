@@ -5,7 +5,7 @@ categories:
 related:
   - hardware-for-ai
   - gpu-programming
-  - model-sizing
+  - parameter-and-memory-estimation
   - mixture-of-experts
 tags:
   - distributed-systems

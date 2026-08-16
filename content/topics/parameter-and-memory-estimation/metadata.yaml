@@ -1,0 +1,14 @@
+title: Parameter & Memory Estimation
+slug: parameter-and-memory-estimation
+categories:
+  - Production AI
+related:
+  - hardware-for-ai
+  - distributed-training
+  - model-compression
+  - model-serving
+tags:
+  - memory
+  - capacity-planning
+  - infrastructure
+difficulty: Intermediate

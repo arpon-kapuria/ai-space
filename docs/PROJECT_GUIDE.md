@@ -363,10 +363,10 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [ ] Full Fine-Tuning
   - [ ] Feature-Based Transfer
   - [ ] Adapter Layers
-  - [ ] LoRA / PEFT (brief — see own node)
+  - [ ] PEFT (brief — see own node)
   - [ ] Instruction Tuning / SFT (brief — see own node)
   - [ ] Alignment - RLHF / DPO (brief — see own node)
-- [ ] LoRA & PEFT
+- [ ] Parameter Efficient Fine Tuning (PEFT)
   - [ ] LoRA
   - [ ] QLoRA
   - [ ] Prefix Tuning
@@ -463,27 +463,31 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [x] Which Strategy Solves Which Problem
 
 <!-- Model Compression & Efficiency -->
-- [ ] Model Compression
-  - [ ] Post-Training Quantization (PTQ): GPTQ, AWQ, SmoothQuant, bitsandbytes/NF4
-  - [ ] Quantization-Aware Training (QAT)
-  - [ ] Mixed-Precision Training (FP32/FP16/BF16, AMP, Loss Scaling)
-  - [ ] Pruning (Structured vs. Unstructured)
-  - [ ] Knowledge Distillation
-  - [ ] Model Formats (GGUF, safetensors, ONNX, PyTorch Checkpoints)
-- [ ] Model Sizing
-  - [ ] Counting Parameters (Embedding + Per-Layer Attention/FFN × Layers)
-  - [ ] Parameter Count → Memory Formula
-  - [ ] Optimizer State Memory
-  - [ ] Activation Memory & Gradient Checkpointing
-  - [ ] Estimating GPUs Needed (Training vs. Inference)
+- [x] Model Compression
+  - [x] Post-Training Quantization (PTQ): GPTQ, AWQ, SmoothQuant, bitsandbytes/NF4
+  - [x] Quantization-Aware Training (QAT)
+  - [x] Mixed-Precision Training (FP32/FP16/BF16, AMP, Loss Scaling)
+  - [x] Pruning (Structured vs. Unstructured)
+  - [x] Knowledge Distillation
+  - [x] Model Formats (GGUF, safetensors, ONNX, PyTorch Checkpoints)
+- [ ] Parameter & Memory Estimation
+  - [x] Counting Parameters (Embedding + Per-Layer Attention/FFN × Layers)
+  - [x] Parameter Count → Memory Formula
+  - [x] Optimizer State Memory
+  - [x] Activation Memory & Gradient Checkpointing
+  - [x] Estimating GPUs Needed (Training vs. Inference)
 
 <!-- LLM Serving & Inference -->
 - [ ] Model Serving
-  - [ ] vLLM
-  - [ ] TensorRT-LLM
-  - [ ] NVIDIA Triton Inference Server
-  - [ ] ONNX Runtime
-  - [ ] SGLang
+  - [ ] What Is Model Serving?
+  - [ ] Serving Architecture
+  - [ ] Model Loading & Placement
+  - [ ] Request Handling & Scheduling
+  - [ ] Concurrency & Capacity
+  - [ ] Scaling: Replicas vs. Multi-GPU
+  - [ ] Production Concerns
+  - [ ] Serving Frameworks (vLLM, SGLang, TensorRT-LLM, NVIDIA Triton Inference Server, ONNX Runtime)
+  - [ ] Putting It All Together
 - [ ] Inference Optimization
   - [ ] Batch vs. Real-Time Inference
   - [ ] Latency vs. Throughput Tradeoffs

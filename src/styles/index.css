@@ -169,9 +169,11 @@ body {
 .prose-note code {
   font-family: var(--font-mono);
   background: var(--color-panel-raised);
+  color: rgb(232, 88, 63);
   padding: 0.1rem 0.35rem;
   border-radius: 0.3rem;
   font-size: 0.875em;
+  font-weight: 500;
 }
 .prose-note pre {
   background: var(--color-panel-raised);
@@ -247,8 +249,8 @@ body {
   border: 1px solid var(--color-hairline);
   border-radius: 0.6rem;
   padding: 0.1rem 1rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
   background: var(--color-panel-raised);
 }
 .prose-note summary {

@@ -1,0 +1,1 @@
+Parameter & Memory Estimation is the arithmetic behind "how many GPUs do I need" — turning a model's parameter count into the actual memory required to train or run it. It's what tells you, before ever launching a job, whether a plan is even feasible on the hardware available.

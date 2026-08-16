@@ -58,7 +58,7 @@ Every time execution moves from one GPU operation to the next, the result of the
 
 **After fusion:** one kernel computes the matrix multiply, adds the bias, and applies GELU, all while the data is still sitting in fast registers/shared memory — global memory is touched once at the very start (reading the inputs) and once at the very end (writing the final result).
 
-The real-world example every LLM engineer runs into is [FlashAttention](/topic/inference-optimization), which fuses the several separate steps of attention (score computation, softmax, weighted sum) into one kernel, specifically to avoid ever writing the full attention score matrix out to global memory — covered in depth under Inference Optimization.
+The real-world example every LLM engineer runs into is **FlashAttention**, which fuses the several separate steps of attention (score computation, softmax, weighted sum) into one kernel, specifically to avoid ever writing the full attention score matrix out to global memory — covered in depth under [Inference Optimization](/topic/inference-optimization).
 
 ## The Actual Tech Stack
 

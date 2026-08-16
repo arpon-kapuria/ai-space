@@ -1,0 +1,1 @@
+Model compression shrinks a trained model — through quantization, pruning, or distillation — so it needs less memory and runs faster, without giving up much accuracy. It's what makes serving a large model affordable instead of requiring a rack of GPUs just to answer one request.
