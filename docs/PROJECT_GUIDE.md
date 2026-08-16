@@ -349,9 +349,12 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
 
 <!-- Phase 1: Building & Aligning the Model -->
 - [ ] Pretraining
-  - [ ] Scaling Laws (Chinchilla)
-  - [ ] Data Curation & Mixture
+  - [ ] Data Curation & Data Mixture
+  - [ ] Scaling Laws
+    - [ ] Chinchilla / Compute-Optimal Scaling
   - [ ] Compute-Optimal Training
+  - [ ] Training Pipeline & Stages
+  - [ ] Pretraining Bottlenecks & Trade-offs
 - [ ] Mixture of Experts
   - [ ] Switch Transformer
   - [ ] Mixtral
@@ -479,7 +482,6 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
 
 <!-- LLM Serving & Inference -->
 - [ ] Model Serving
-  - [ ] What Is Model Serving?
   - [ ] Serving Architecture
   - [ ] Model Loading & Placement
   - [ ] Request Handling & Scheduling
