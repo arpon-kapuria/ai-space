@@ -17,6 +17,8 @@ import { extractToc } from "../lib/toc";
 import { colorForCategories, difficultyColor } from "../lib/categoryColors";
 import { useThemeStore } from "../store/themeStore";
 import { MermaidBlock } from "../components/MermaidBlock";
+import { CodeBlock } from "../components/CodeBlock";
+import { hastToText, type HastNode } from "../lib/hastToText";
 import { useGraphStore } from "../store/graphStore";
 
 export function DetailedNote() {
@@ -138,13 +140,32 @@ export function DetailedNote() {
                     </a>
                   );
                 },
+                pre(props) {
+                  const { node, children } = props as typeof props & {
+                    node?: HastNode;
+                  };
+                  const codeNode = node?.children?.[0];
+                  const classes = (codeNode?.properties?.className ?? []).join(" ");
+                  const match = /(?:^|\s)language-(\w+)(?:\s|$)/.exec(classes);
+                  const language = match?.[1];
+                  const raw = hastToText(codeNode).replace(/\n$/, "");
+                  if (language === "mermaid") {
+                    return <MermaidBlock code={raw} />;
+                  }
+                  // For every other fenced block, wrap it with a header
+                  // showing the language and a copy button. The raw
+                  // source text is read straight off the hast node
+                  // rather than the rendered <code> children, since
+                  // rehype-highlight has already tokenized those into
+                  // nested <span>s by this point.
+                  return (
+                    <CodeBlock language={language} code={raw}>
+                      {children}
+                    </CodeBlock>
+                  );
+                },
                 code(props) {
                   const { className, children, ...rest } = props;
-                  const match = /language-(\w+)/.exec(className || "");
-                  const value = String(children).replace(/\n$/, "");
-                  if (match?.[1] === "mermaid") {
-                    return <MermaidBlock code={value} />;
-                  }
                   return (
                     <code className={className} {...rest}>
                       {children}

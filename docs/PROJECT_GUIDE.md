@@ -481,20 +481,41 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [x] Estimating GPUs Needed (Training vs. Inference)
 
 <!-- LLM Serving & Inference -->
+- [ ] Request Lifecycle (overview)
+  - [ ] Tokenization → Prefill → Decode → Detokenization → Response
+- [ ] Prefill vs Decode
+  - [ ] Prefill (Compute-Bound Phase, Parallel over Prompt Tokens)
+  - [ ] Decode (Memory-Bound Phase, Sequential Token Generation)
+  - [ ] Chunked Prefill (Mixing Prefill and Decode Within a Batch Iteration)
+  - [ ] Disaggregated Prefill/Decode (Separate GPU Pools per Phase)
+- [ ] KV Cache
+  - [ ] Why It Grows Linearly with Sequence Length
+  - [ ] Multi-Query Attention (MQA)
+  - [ ] Grouped-Query Attention (GQA)
+  - [ ] PagedAttention (Memory Management, vLLM)
+  - [ ] Prefix Caching (RadixAttention)
+- [ ] Batching Strategies
+  - [ ] Static Batching
+  - [ ] Dynamic Batching
+  - [ ] Continuous Batching (Iteration-Level Scheduling)
+- [ ] Streaming & Response Delivery
+  - [ ] Server-Sent Events / Chunked Transfer
+  - [ ] Time-to-First-Token as the User-Facing Metric
+  - [ ] Interaction with Batching (a Streaming Request Holds Its Batch Slot)
 - [ ] Model Serving
-  - [ ] Serving Architecture
-  - [ ] Model Loading & Placement
-  - [ ] Request Handling & Scheduling
-  - [ ] Concurrency & Capacity
+  - [ ] Serving Architecture & Scheduling
+  - [ ] Model Loading & Placement (Cold Start, Warm Pools)
+  - [ ] Autoscaling (Queue-Depth / Latency-Triggered)
   - [ ] Scaling: Replicas vs. Multi-GPU
-  - [ ] Production Concerns
   - [ ] Serving Frameworks (vLLM, SGLang, TensorRT-LLM, NVIDIA Triton Inference Server, ONNX Runtime)
-  - [ ] Putting It All Together
 - [ ] Inference Optimization
   - [ ] Batch vs. Real-Time Inference
   - [ ] Latency vs. Throughput Tradeoffs
   - [ ] Operator Fusion & Graph Optimization
   - [ ] FlashAttention
+- [ ] Speculative Decoding
+  - [ ] Draft Model + Verification
+  - [ ] Medusa / Lookahead Decoding
 - [ ] Multi-LoRA Serving
   - [ ] Adapter Batching (S-LoRA-style)
   - [ ] Base Model + Adapter Swapping
@@ -502,32 +523,16 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [ ] Ollama
   - [ ] llama.cpp
   - [ ] MLX
-- [ ] Request Lifecycle (overview)
-  - [ ] Tokenization → Prefill → Decode → Detokenization → Response
-- [ ] Batching Strategies
-  - [ ] Static Batching
-  - [ ] Dynamic Batching
-  - [ ] Continuous Batching (Iteration-Level Scheduling)
-- [ ] KV Cache
-  - [ ] Why It Grows Linearly with Sequence Length
-  - [ ] Multi-Query Attention (MQA)
-  - [ ] Grouped-Query Attention (GQA)
-- [ ] Prefill vs Decode
-  - [ ] Prefill (Compute-Bound Phase, Parallel over Prompt Tokens)
-  - [ ] Decode (Memory-Bound Phase, Sequential Token Generation)
-- [ ] Speculative Decoding
-  - [ ] Draft Model + Verification
-  - [ ] Medusa / Lookahead Decoding
-- [ ] Caching
-  - [ ] Semantic Caching
-  - [ ] Prefix Caching (RadixAttention)
-  - [ ] Response Caching
 
 <!-- Cost & Economics -->
 - [ ] LLM Cost & Pricing
   - [ ] Token-Based API Pricing
   - [ ] Input/Output Cost Asymmetry
-  - [ ] Cost Optimization Levers (Routing, Caching, Batching)
+- [ ] Cost Optimization
+  - [ ] Model Routing (Cheap vs. Expensive Model by Query Complexity)
+  - [ ] Semantic Caching
+  - [ ] Response Caching
+  - [ ] Batching as a Cost Lever
 
 <!-- MLOps Foundations -->
 - [x] MLOps Fundamentals
