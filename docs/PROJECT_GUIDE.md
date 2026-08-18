@@ -358,7 +358,7 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
 - [ ] Mixture of Experts
   - [ ] Switch Transformer
   - [ ] Mixtral
-  - [ ] Routing & Load Balancing
+  - [ ] Routing & Load Balancing (links to Expert parallelism in Distributed Training)
 - [ ] RL Foundations
   - [ ] Policy / Reward / Advantage
   - [ ] PPO Basics
@@ -369,6 +369,7 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [ ] PEFT (brief — see own node)
   - [ ] Instruction Tuning / SFT (brief — see own node)
   - [ ] Alignment - RLHF / DPO (brief — see own node)
+  - [ ] When Fine-Tuning Is the Wrong Tool (vs. In-Context Learning, RAG, Distillation)
 - [ ] Parameter Efficient Fine Tuning (PEFT)
   - [ ] LoRA
   - [ ] QLoRA
@@ -390,6 +391,12 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [ ] Variations: DPO, GRPO, RLAIF
 
 <!-- Phase 2: Building With the Model -->
+- [ ] LLM Landscape
+  - [ ] Context Window & Tokens
+  - [ ] Open-Weight vs. Open-Source vs. Closed-Source
+  - [ ] System Prompts & Chat Templates
+  - [ ] Foundation Models vs. Fine-Tuned Derivatives
+  - [ ] LLM Leaderboards & Arenas
 - [ ] Prompt Engineering
   - [ ] Zero-Shot / Few-Shot
   - [ ] Chain-of-Thought
@@ -402,9 +409,15 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [ ] Sliding Window Attention
 - [ ] RAG
   - [ ] Naive RAG
-  - [ ] Advanced RAG (Query Rewriting, Re-ranking, HyDE, RAG-Fusion)
+    - [ ] Chunking Strategies
+  - [ ] Advanced RAG (Query Rewriting, Re-ranking, Hybrid Search, HyDE, RAG-Fusion)
   - [ ] Agentic / Adaptive RAG (Self-RAG, Corrective RAG, GraphRAG)
-  - [ ] RAG Evaluation
+  - [ ] Data Freshness & Staleness
+  - [ ] RAG Evaluation (Evaluation Triad, Retrieval Recall/Precision, Groundedness, Attribution & Citation Quality)
+- [ ] Context Engineering
+  - [ ] Context Window Budgeting & Prioritization
+  - [ ] Truncation & Compression Strategies
+  - [ ] Context Rot (Degradation as Context Fills Up)
 - [ ] Vector Databases
   - [ ] HNSW / IVF Indexing
   - [ ] Metadata Filtering
@@ -413,13 +426,17 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [ ] Tool / Function Calling
   - [ ] Memory Systems
   - [ ] Structured Output / JSON Mode
-  - [ ] Agent Harnesses & Evaluation
+  - [ ] Agent Evaluation
+- [ ] Harness Engineering
+  - [ ] The Control Loop: Orchestrating Prompting + Tools + Memory
+  - [ ] Harness vs. Model: What's Prompted vs. What's Engineered Around It
 - [ ] Agentic Architectures
   - [ ] ReAct
   - [ ] Reflexion
   - [ ] Plan-and-Execute
   - [ ] Multi-Agent Orchestration
   - [ ] LLM Compiler / Parallel Tool Graphs
+  - [ ] Operational Guardrails: Loop Budgets, Tool Budgets, Termination Conditions
 - [ ] GPT Family
 - [ ] Claude Family
 - [ ] Llama Family
@@ -428,21 +445,21 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [ ] Gemma
   - [ ] Qwen
   - [ ] DeepSeek
-- [ ] LLM Landscape
-  - [ ] Context Window & Tokens
-  - [ ] Open-Weight vs. Open-Source vs. Closed-Source
-  - [ ] System Prompts & Chat Templates
-  - [ ] Foundation Models vs. Fine-Tuned Derivatives
-  - [ ] LLM Leaderboards & Arenas
 - [ ] LLM Evaluation
   - [ ] Benchmarks (MMLU, HellaSwag, GSM8K)
+  - [ ] Golden Sets & Regression Testing
+  - [ ] Adversarial / Red-Team Test Sets
   - [ ] LLM-as-Judge
+  - [ ] Human Evaluation Process
   - [ ] Hallucination Detection & Mitigation
 - [ ] LLM Safety & Security
   - [ ] Prompt Injection
   - [ ] Jailbreaking
   - [ ] Guardrails
   - [ ] Red-Teaming
+  - [ ] Data Leakage Prevention (PII, Secrets, Cross-Session Bleed)
+  - [ ] Permission & Tool-Access Boundaries for Agents
+  - [ ] Multi-Tenant Isolation (Cache Safety, Cross-User Context Contamination)
 
 ### Production AI
 
@@ -453,27 +470,29 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [x] Interconnects (NVLink, InfiniBand)
 - [x] GPU Programming
   - [x] CUDA Programming Model (Kernel, Threads, Blocks, Grids, Warps)
-  - [x] Memory Hierarchy (Global / Shared / Register Memory, Coalescing)
-  - [x] Kernel Fusion (links to FlashAttention under Inference Optimization)
+  - [ ] GPU Memory (Global Memory / HBM, L2 Cache, Shared Memory, L1 Cache, Registers, The Memory Pyramid)
+  - [ ] Tensor Cores (Dedicated Matrix-Multiply Hardware — Why Mixed Precision & Quantization Are Actually Fast, Not Just Smaller)
+  - [ ] Kernel Optimization (Kernel Fusion, FlashAttention)
   - [x] The Actual Tech Stack (cuBLAS / cuDNN, Triton, Raw CUDA, CUTLASS)
 - [x] Distributed Training
   - [x] Data Parallelism
   - [x] Tensor Parallelism
   - [x] Pipeline Parallelism
   - [x] Sequence Parallelism
+  - [ ] Context Parallelism (Ring Attention / DeepSpeed Ulysses — Long-Context Training)
   - [x] ZeRO / Fully Sharded Data Parallel (FSDP)
-  - [x] 3D Parallelism
+  - [ ] Expert Parallelism (GPU-Splitting Mechanics Only — Routing Logic Cross-Links to Mixture of Experts)
+  - [x] 3D Parallelism (and Beyond: Hybrid N-D Parallelism, Combining All Strategies Above)
   - [x] Which Strategy Solves Which Problem
 
 <!-- Model Compression & Efficiency -->
 - [x] Model Compression
-  - [x] Post-Training Quantization (PTQ): GPTQ, AWQ, SmoothQuant, bitsandbytes/NF4
-  - [x] Quantization-Aware Training (QAT)
+  - [x] Quantization (Types and Methods)
   - [x] Mixed-Precision Training (FP32/FP16/BF16, AMP, Loss Scaling)
   - [x] Pruning (Structured vs. Unstructured)
   - [x] Knowledge Distillation
   - [x] Model Formats (GGUF, safetensors, ONNX, PyTorch Checkpoints)
-- [ ] Parameter & Memory Estimation
+- [x] Parameter & Memory Estimation
   - [x] Counting Parameters (Embedding + Per-Layer Attention/FFN × Layers)
   - [x] Parameter Count → Memory Formula
   - [x] Optimizer State Memory
@@ -481,23 +500,32 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [x] Estimating GPUs Needed (Training vs. Inference)
 
 <!-- LLM Serving & Inference -->
+- [ ] Inference Engineering (overview)
+  - [ ] Why Serving ≠ Training: The Latency / Throughput / Cost / Reliability Space
+  - [ ] Roadmap of Optimization Techniques
 - [ ] Request Lifecycle (overview)
   - [ ] Tokenization → Prefill → Decode → Detokenization → Response
 - [ ] Prefill vs Decode
   - [ ] Prefill (Compute-Bound Phase, Parallel over Prompt Tokens)
   - [ ] Decode (Memory-Bound Phase, Sequential Token Generation)
   - [ ] Chunked Prefill (Mixing Prefill and Decode Within a Batch Iteration)
-  - [ ] Disaggregated Prefill/Decode (Separate GPU Pools per Phase)
+  - [ ] Prefill/Decode Disaggregation
 - [ ] KV Cache
   - [ ] Why It Grows Linearly with Sequence Length
   - [ ] Multi-Query Attention (MQA)
   - [ ] Grouped-Query Attention (GQA)
   - [ ] PagedAttention (Memory Management, vLLM)
-  - [ ] Prefix Caching (RadixAttention)
+  - [ ] Prefix Caching (RadixAttention, SGLang)
+  - [ ] Cache Eviction Under Memory Pressure
+  - [ ] KV Cache Offloading
 - [ ] Batching Strategies
   - [ ] Static Batching
   - [ ] Dynamic Batching
   - [ ] Continuous Batching (Iteration-Level Scheduling)
+- [ ] Speculative Decoding
+  - [ ] Draft Model + Verification
+  - [ ] Medusa / Lookahead Decoding
+  - [ ] Trade-offs vs. Quantization & Distillation
 - [ ] Streaming & Response Delivery
   - [ ] Server-Sent Events / Chunked Transfer
   - [ ] Time-to-First-Token as the User-Facing Metric
@@ -505,34 +533,48 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
 - [ ] Model Serving
   - [ ] Serving Architecture & Scheduling
   - [ ] Model Loading & Placement (Cold Start, Warm Pools)
-  - [ ] Autoscaling (Queue-Depth / Latency-Triggered)
   - [ ] Scaling: Replicas vs. Multi-GPU
-  - [ ] Serving Frameworks (vLLM, SGLang, TensorRT-LLM, NVIDIA Triton Inference Server, ONNX Runtime)
-- [ ] Inference Optimization
-  - [ ] Batch vs. Real-Time Inference
-  - [ ] Latency vs. Throughput Tradeoffs
-  - [ ] Operator Fusion & Graph Optimization
-  - [ ] FlashAttention
-- [ ] Speculative Decoding
-  - [ ] Draft Model + Verification
-  - [ ] Medusa / Lookahead Decoding
+  - [ ] Autoscaling (Queue-Depth / Latency-Triggered)
+  - [ ] Fallback Logic & Degraded-Mode UX (Provider Outage, Rate Limits, Errors)
+  - [ ] Inferencing Frameworks (vLLM, SGLang, TensorRT-LLM, NVIDIA Triton Inference Server, ONNX Runtime)
+- [ ] Inference Optimization (quick-prep overview)
+  - [ ] Latency vs. Throughput Tradeoffs (the framing every technique below serves)
+  - [ ] Real-Time Inference vs. Batching, at a glance
+  - [ ] Batching, KV Cache & PagedAttention, at a glance
+  - [ ] Prefix Caching / RadixAttention, at a glance
+  - [ ] KV Cache Offloading, at a glance
+  - [ ] Prefill/Decode Disaggregation & Chunked Prefill, at a glance
+  - [ ] Speculative Decoding, at a glance
+  - [ ] Quantization & Compression, at a glance (cross-links Model Compression)
+  - [ ] Graph Optimization & Operator Fusion
+  - [ ] FlashAttention, at a glance
+  - [ ] Request/Load Routing & Distributed Inference Frameworks (llm-d, Ray Serve)
 - [ ] Multi-LoRA Serving
   - [ ] Adapter Batching (S-LoRA-style)
   - [ ] Base Model + Adapter Swapping
 - [ ] Local & Edge Inference
-  - [ ] Ollama
   - [ ] llama.cpp
+  - [ ] Ollama
   - [ ] MLX
 
 <!-- Cost & Economics -->
 - [ ] LLM Cost & Pricing
   - [ ] Token-Based API Pricing
   - [ ] Input/Output Cost Asymmetry
+  - [ ] Cost Attribution (Per Feature, Tenant, User Journey)
 - [ ] Cost Optimization
   - [ ] Model Routing (Cheap vs. Expensive Model by Query Complexity)
-  - [ ] Semantic Caching
+  - [ ] Prompt/Prefix Caching vs. Semantic Caching (Trade-offs)
   - [ ] Response Caching
   - [ ] Batching as a Cost Lever
+
+<!-- Production Failure Modes -->
+- [ ] Production Failure Modes
+  - [ ] Hallucinated Tool Calls
+  - [ ] Malformed/Structured Output Failures & Repair Loops
+  - [ ] Stale Retrieval
+  - [ ] Runaway Agent Loops
+  - [ ] Silent Eval Regressions
 
 <!-- MLOps Foundations -->
 - [x] MLOps Fundamentals
@@ -568,4 +610,4 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
 <!-- System Design -->
 - [ ] System Design
   - [ ] ML System Design (Data Pipelines, Recommendation/Fraud/Search Case Studies)
-  - [ ] Modern AI System Design (RAG Pipelines, Agentic Systems, LLM Serving at Scale)
+  - [ ] AI System Design (RAG Pipelines, Agentic Systems, LLM Serving at Scale, Cross-Stack Latency/Quality/Cost/Reliability Trade-offs)

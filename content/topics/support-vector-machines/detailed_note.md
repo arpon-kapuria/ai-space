@@ -27,10 +27,6 @@ The constraint requires every point to be on the correct side of the boundary an
 
 Margin maximization alone only works if the classes can be separated by a straight line. Most real data can't be. The obvious fix is to transform the features into a higher-dimensional space where a straight line *does* separate them — a curve in 2D can become a flat plane in 3D, for instance. The problem is that computing this transformation directly can be expensive, and for some useful transformations, the target space is infinite-dimensional, which makes it impossible to compute directly at all.
 
-The kernel trick sidesteps this entirely. It turns out the SVM's optimization and its predictions only ever need the *dot product* between pairs of data points — never the individual transformed points themselves. So instead of transforming the data and then computing a dot product, you can use a **kernel function** that computes what that dot product *would have been* in the higher-dimensional space, directly from the original features, without ever performing the transformation. This lets SVMs work in enormously high-dimensional (even infinite-dimensional) spaces at the cost of evaluating a kernel function, which is often cheap.
-
-Common kernels: **linear** (no transformation — plain margin maximization), **polynomial** (represents feature combinations up to a specific power), and the **RBF kernel** (Gaussian based, measures similarity by distance), which is the most commonly used default and implicitly corresponds to an infinite-dimensional feature space.
-
 <details>
 <summary>Math: what a kernel actually computes</summary>
 
@@ -43,6 +39,10 @@ $$
 measures similarity that decays smoothly with distance, and corresponds to an infinite-dimensional $\phi$ that's never explicitly computed — only $K$ itself ever needs to be evaluated.
 
 </details>
+
+The kernel trick sidesteps this entirely. It turns out the SVM's optimization and its predictions only ever need the *dot product* between pairs of data points — never the individual transformed points themselves. So instead of transforming the data and then computing a dot product, you can use a **kernel function** that computes what that dot product *would have been* in the higher-dimensional space, directly from the original features, without ever performing the transformation. This lets SVMs work in enormously high-dimensional (even infinite-dimensional) spaces at the cost of evaluating a kernel function, which is often cheap.
+
+> Common kernels: **linear** (no transformation — plain margin maximization), **polynomial** (represents feature combinations up to a specific power), and the **RBF kernel** (Gaussian based, measures similarity by distance), which is the most commonly used default and implicitly corresponds to an infinite-dimensional feature space.
 
 ## Soft Margin
 

@@ -56,53 +56,53 @@ Beyond problem type, five practical constraints do most of the narrowing:
 
 ## A Typical Progression, Depending on What Matters
 
-![Decision Progression](/content/topics/ml-algorithm-selection-guide/image.png)
+There's no single ladder everyone climbs — the right progression depends on which factor from Section 5 dominates. A few common paths illustrate how to make that choice.
 
-There's no single ladder everyone climbs — which path makes sense depends on which factor from Section 5 dominates. A few common ones:
+### Supervised Learning
 
-- **Interpretability matters, relationship looks linear:**
+Start with **Linear Regression / Logistic Regression** as the baseline. If the relationship is roughly linear and the baseline already meets the success metric, stop there — additional complexity only makes the model harder to interpret.
 
-$$
-\text{Logistic/Linear Regression} \rightarrow \text{stop here unless the metric demands more}
-$$
+If interpretability still matters but the relationship is clearly non-linear, move to a **Decision Tree**, which can capture non-linear splits while retaining a relatively readable decision path.
 
-If the baseline already clears the success metric from problem framing, moving further trades away the one thing you actually needed.
+If accuracy matters more than interpretability, the dataset size becomes important. For medium-to-large datasets, a common progression is **Random Forest → Gradient Boosting**. For small datasets, **Kernel SVM or KNN** can be more practical because their computational cost remains manageable.
 
-- **Interpretability matters, but the relationship is clearly non-linear:**
+```mermaid
+flowchart LR
 
-$$
-\text{Logistic/Linear Regression (baseline)} \rightarrow \text{Decision Tree}
-$$
+    A["Start"] --> B{"Need Interpretability?"}
 
-A single tree keeps a readable decision path (and feature importances) while capturing non-linear splits the linear model can't.
+    B -->|"Yes"| C{"Linear Relationship?"}
+    B -->|"No"| D{"Dataset size?"}
 
-- **Accuracy matters more than interpretability, data is medium-to-large:**
+    C -->|"Yes"| E["Linear / Logistic Regression"]
+    C -->|"No"| F["Decision Tree"]
 
-$$
-\text{Logistic/Linear Regression (baseline)} \rightarrow \text{Ensemble Methods (Random Forest} \rightarrow \text{Gradient Boosting)}
-$$
+    D -->|"Medium / Large"| G["Random Forest"] --> H["Gradient Boosting"]
+    D -->|"Small"| I["SVM / KNN"]
+```
 
-This is the most common path in practice — start linear to sanity-check the problem is learnable, then move to boosted trees for the accuracy ceiling.
+### Unsupervised Learning
 
-- **Small dataset, non-linear, accuracy over interpretability:**
+For **clustering**, start with **K-Means** when clusters are reasonably compact and you are comfortable choosing `k`. If the data contains irregularly shaped clusters or outliers, **DBSCAN** is a better fit. If you don't want to fix `k` upfront and want to explore the hierarchy of clusters, move to **Hierarchical Clustering**.
 
-$$
-\text{Logistic/Linear Regression (baseline)} \rightarrow \text{SVM (kernel) or KNN}
-$$
+For **dimensionality reduction**, **PCA** is the natural first step when the goal is preprocessing or getting an initial view of the data. For non-linear visualization, move to **UMAP** or **t-SNE**.
 
-Both need the data to stay small to remain practical, which is exactly the regime where ensembles have too little data to build many diverse trees and a kernel method's cost is still affordable.
+```mermaid
+flowchart LR
+    A["Start"] --> B{"Goal?"}
 
-- **Unsupervised — clustering:**
+    B -->|"Clustering"| C["K-Means"]
+    B -->|"Dimensionality reduction"| D["PCA"]
 
-$$
-\text{K-Means} \rightarrow \text{DBSCAN (irregular cluster shapes, outliers)} \rightarrow \text{Hierarchical (don't want to fix \emph{k} upfront)}
-$$
+    C --> E{"Irregular shapes / outliers?"}
+    E -->|"Yes"| F["DBSCAN"]
+    F --> G{"No fixed k?"}
+    G -->|"Yes"| H["Hierarchical"]
 
-- **Unsupervised — dimensionality reduction:**
+    D --> I{"Non-linear visualization?"}
+    I -->|"Yes"| J["UMAP / t-SNE"]
+```
 
-$$
-\text{PCA (preprocessing or a first look)} \rightarrow \text{UMAP/t-SNE (visualization only)}
-$$
 
 ## 7. When to Stop at the Baseline
 

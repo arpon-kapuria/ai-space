@@ -4,7 +4,7 @@
 
 [Supervised learning](/topic/supervised-learning) fits a model by minimizing loss on the training set, but the actual goal is never the training set — it's how the model does on data it hasn't seen. Once you notice a model doing well in training and poorly outside it, "my model is wrong" isn't specific enough to act on. You need to know *which kind* of wrong you're dealing with, because the fix is different depending on the answer. Is the model too simple to capture the real pattern, and it's wrong the same way no matter what training data you gave it? Or is it so flexible that it's fitting noise specific to this training set, and would give a completely different answer if you retrained it on a different sample? The bias-variance decomposition gives a name and a diagnosis to exactly that distinction.
 
-## Bias and variance, defined
+## Bias and variance
 
 - **Bias** is error from a model that's too simple. A straight line trying to fit a curved relationship has high bias — it's consistently wrong, no matter how much data you give it, because it just can't represent the real pattern. High bias looks like **underfitting**: bad performance on both training and test data.
 - **Variance** is error from a model that's too sensitive to its specific training set. A very flexible model — a deep decision tree with no depth limit, say — can fit the training data almost perfectly, noise included. Train it again on a different sample, and you'd get a noticeably different model. High variance looks like **overfitting**: great on training data, worse on test data.

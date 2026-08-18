@@ -10,8 +10,6 @@ Serving at that size, to many users, at low latency, is a different problem from
 
 **The core idea:** weights are normally stored as 32- or 16-bit floats. Quantization stores them with fewer bits — commonly INT8 or INT4 — which shrinks memory and, since less data moves, speeds up inference too (recall from [Hardware for AI](/topic/hardware-for-ai) that inference is often memory-bandwidth-bound, not compute-bound).
 
-The gap between the true float value and this reconstructed approximation is **quantization error** — the whole game in quantization research is minimizing that error, especially for the handful of unusually large "outlier" values that a naive uniform scale handles badly.
-
 <details>
 <summary>Math: How a float gets mapped to an integer</summary>
 
@@ -23,16 +21,35 @@ Here, `scale = (max_float − min_float) / (2^N − 1)`. To use the weight again
 
 </details>
 
+The gap between the true float value and this reconstructed approximation is **quantization error** — the whole game in quantization research is minimizing that error, especially for the handful of unusually large "outlier" values that a naive uniform scale handles badly.
+
+### Quantization Types
+
+Quantization can use different numerical representations depending on the target hardware, memory constraints, and accuracy requirements.
+
+- **INT8** — 8-bit integer representation. It is widely supported and provides a good balance between memory reduction, inference speed, and accuracy.
+- **INT4** — 4-bit integer representation. It reduces weight memory to roughly one quarter of FP16, making it particularly useful for serving large LLMs cheaply.
+- **FP8** — 8-bit floating-point representation. Formats such as **E4M3** and **E5M2** trade precision and dynamic range differently. Unlike INT8, FP8 retains a floating-point exponent, making it better suited to values with a wider dynamic range.
+- **NF4** — 4-bit NormalFloat, designed around the approximately bell-shaped distribution of neural network weights. It is the quantization format used by QLoRA and is available through bitsandbytes.
+
 **Post-Training Quantization (PTQ)** quantizes an already-trained model, with no retraining — fast, cheap, the default option. Naive PTQ can still hurt accuracy at 4 bits, which is why specific methods exist:
 
 - **GPTQ** quantizes weights layer by layer, adjusting each remaining weight to compensate for error already introduced upstream — an error-correcting sweep, not an independent per-weight rounding.
 - **AWQ** (Activation-aware Weight Quantization) keeps the small number of weights that produce the largest activations at higher precision, and quantizes the rest more aggressively — spending precision where it actually affects the output.
 - **SmoothQuant** targets a different problem: transformer *activations*, not just weights, have outliers that are hard to quantize. It mathematically shifts some of that difficulty from activations onto weights, which handle it better.
-- **bitsandbytes / NF4** is the scheme behind QLoRA. NF4 (4-bit NormalFloat) is built for how weights are actually distributed (roughly bell-curved), giving lower error than a naive uniform 4-bit format.
+- **bitsandbytes** provides practical low-bit quantization schemes, including **NF4**, which is the 4-bit format commonly used by QLoRA.
 
 **Quantization-Aware Training (QAT)** goes further: it simulates quantization during training or fine-tuning, so weights adapt to the precision loss before it's applied for real. It typically beats PTQ at very low bit widths, at the cost of an actual training run instead of a one-time conversion. Rule of thumb: PTQ for a quick, cheap shrink; QAT when the last bit of accuracy at very low precision is worth paying for.
 
-**How low can it go, and what's used in production?** Research has pushed past 4 bits — 2-bit and even 1-bit/ternary (-1,0,1) schemes like BitNet *(1.58-bit ternary)* exist — but these need custom training recipes and kernels, and aren't a default anywhere yet. In production, **INT8** is the safe, universally-supported floor; **INT4** (GPTQ, AWQ, or NF4) is the current sweet spot for serving large LLMs cheaply, trading a small accuracy dip for roughly 4x less memory than FP16. Practical flow: start at FP16/BF16, drop to INT8 if memory or latency is tight, go to INT4 (PTQ, or QAT if PTQ's accuracy loss is too large) only once serving cost demands it. Below INT4 is still mostly a research frontier.
+> **Rule of thumb:** *PTQ* for a quick, cheap shrink; *QAT* when the last bit of accuracy at very low precision is worth paying for.
+
+### How Low Can It Go?
+
+Research has pushed past 4 bits — 2-bit and even 1-bit/ternary (-1,0,1) schemes like BitNet *(1.58-bit ternary)* exist — but these need custom training recipes and kernels, and aren't a default anywhere yet.
+
+In production, **INT8** remains a widely supported choice, while **INT4** (GPTQ, AWQ, or NF4) is a common sweet spot for serving large LLMs cheaply, trading a small accuracy dip for roughly 4x less weight memory than FP16. **FP8** is increasingly practical on modern accelerators with native FP8 support.
+
+**Practical flow:** start at FP16/BF16, use FP8 or INT8 when hardware and workload support them, and move to INT4 when serving cost demands it. Below INT4 is still mostly a research frontier.
 
 ## Mixed-Precision Training
 

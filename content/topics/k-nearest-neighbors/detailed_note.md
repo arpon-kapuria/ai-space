@@ -4,7 +4,7 @@
 
 Linear and logistic regression both assume a specific shape for the relationship between inputs and output, then fit a fixed set of parameters to that shape. That's a strong assumption, and it's wrong whenever the real pattern doesn't look like a line. k-Nearest Neighbors takes the opposite approach: assume nothing about the shape, and don't fit any parameters at all. Just remember the training data, and when a new point comes in, look at what's nearby.
 
-## How it works
+## How KNN works
 
 To predict a label for a new point:
 
@@ -15,7 +15,7 @@ To predict a label for a new point:
 
 There's no training phase in the usual sense — the "model" is just the training data itself. All the work happens at prediction time, which is why kNN is sometimes called a lazy learner. This is also its biggest practical weakness: prediction gets slower as the dataset grows, since you're comparing against every stored point.
 
-## Choosing k
+### Choosing k
 
 $k$ is the main knob, and it's a direct bias-variance tradeoff:
 

@@ -28,7 +28,8 @@ The delayed-ground-truth problem deserves its own callout: for a fraud model, th
 
 Production ML monitoring stacks four layers on top of each other. All four run simultaneously, on different tools, at different speeds.
 
-1. **System metrics** (the SWE layer — still necessary, just not sufficient):
+### System metrics (the SWE layer)
+
 - **Latency (p50, p95, p99):** How long a request takes to get a response. To know whether the system is **fast enough for users** and to catch slow requests.
   - **p50:** Typical response time. To measure the **normal/average** experience.
   - **p95:** 95% of requests are this fast or faster. To find **noticeable slowness** that affects a significant group.
@@ -40,22 +41,26 @@ Production ML monitoring stacks four layers on top of each other. All four run s
 - **Memory usage:** How much RAM/VRAM is being used. To prevent **out-of-memory failures** and understand resource needs.
 - **Queue depth:** How many requests are waiting to be processed. To detect **backlogs and bottlenecks** before they hurt performance.
 
-2. **Data quality metrics** (is the *input* healthy):
-- Schema validation — expected columns present, expected types, no unexpected nulls
-- Missing value rate, out-of-range values, duplicate records
-- Freshness — how stale is the data feeding the model right now
+### Data quality metrics (is the input healthy)
 
-3. **Model performance metrics** (is the *model* healthy):
+- **Schema validation** — expected columns present, expected types, no unexpected nulls
+- Missing value rate, out-of-range values, duplicate records
+- **Freshness** — how stale is the data feeding the model right now
+
+### Model performance metrics (is the model healthy)
+
 - **Input/feature drift** — PSI, KS test, on individual features (from [MLOps Fundamentals](/topic/mlops-fundamentals))
 - **Prediction drift** — has the distribution of the model's *outputs* shifted, even before drift shows up per-feature? Often the earliest warning sign, since it aggregates every input shift into one number.
 - **Delayed ground-truth metrics** — accuracy, precision/recall, F1, RMSE, computed the moment real labels finally arrive, to confirm what drift metrics only implied
 - **Confidence/calibration** — is the model's predicted probability still trustworthy, or has it grown over/under-confident
 - **Outlier rate** — fraction of incoming requests that fall well outside the training distribution entirely
 
-4. **Business metrics** (does it matter to the business):
-- Conversion rate, revenue impact, user engagement, task completion — the numbers a model was built to move in the first place. A model can look statistically healthy on every metric above and still be failing the business goal it exists for, which is why this layer is never skipped even though it's the "softest" one to track.
+### Business metrics (does it matter to the business)
 
-5. **LLM-specific metrics**, on top of all four layers above:
+- **Conversion rate, revenue impact, user engagement, task completion** — the numbers a model was built to move in the first place. A model can look statistically healthy on every metric above and still be failing the business goal it exists for, which is why this layer is never skipped even though it's the "softest" one to track.
+
+### LLM-specific metrics
+
 - **Latency shape** — Time-to-First-Token (TTFT) and Time-Per-Output-Token (TPOT), tracked separately, since LLM latency is felt very differently by a user than a single flat "response time" number
 - **Cost** — input/output token counts per request, and $ cost per request, tracked continuously (covered in depth under [LLM Cost & Pricing](/topic/llm-cost-and-pricing))
 - **Output quality without ground truth** — hallucination rate, toxicity/safety scores, and increasingly LLM-as-judge scores run online against sampled production traffic (covered under [LLM Evaluation](/topic/llm-evaluation))
@@ -78,12 +83,13 @@ No single tool covers all four layers — production stacks combine several, eac
 
 ## Logging & Tracing
 
-Drift detection and the metrics above answer *that* something changed in aggregate. They don't answer *what happened on one specific request* — which is what's actually needed to debug a bad prediction a user reported.
+Drift detection and the metrics above answer that something changed in aggregate. They don't answer what happened on one specific request — which is what's actually needed to debug a bad prediction a user reported.
 
 - **Logging** records the inputs, outputs, and intermediate values for individual requests, so a specific bad prediction can be inspected after the fact instead of reproduced from scratch.
 - **Tracing** follows a single request across every service it touches — feature lookup, model inference, post-processing, or for an LLM, every step of a multi-call agent chain — and times each step. This is what turns "the API feels slow sometimes" into "step 3, the retrieval call, is the bottleneck." OpenTelemetry is the common standard for generating these traces regardless of stack.
+- **Spans** are the individual units of work within a trace. Each span represents one operation — such as a database query, embedding generation, model inference, or retrieval call — with its duration, status, attributes, and other metadata. A trace is essentially a collection of related spans connected by their parent-child relationships. This lets you drill down from "this request was slow" to "this particular database query took 800 ms."
 
-Together they answer two different questions: logging answers "what did the model see and say," tracing answers "where did the time go, and in what order."
+Together they answer two different questions: **logging** answers "what did the model see and say", **tracing** answers "what path did the request take and where did the time go," and **spans** answer "what happened during each individual step."
 
 ## LLM-Specific Observability, in Practice
 
