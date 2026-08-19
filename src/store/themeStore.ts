@@ -2,7 +2,7 @@ import { create } from "zustand";
 
 export type Theme = "dark" | "light";
 
-const STORAGE_KEY = "AI-Dictionary-theme";
+const STORAGE_KEY = "AI-Space-theme";
 
 function getInitialTheme(): Theme {
   if (typeof window === "undefined") return "dark";

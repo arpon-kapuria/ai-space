@@ -10,17 +10,17 @@ export function About() {
           About
         </p>
         <h1 className="mt-2 font-display text-3xl font-semibold text-ink">
-          AI-Dictionary
+          AI-Space
         </h1>
         <p className="mt-6 text-sm leading-relaxed text-ink-muted">
           Modern AI knowledge is fragmented. Definitions live in one place, research papers in another, tutorials somewhere else, and the relationships between concepts are often left for you to figure out.
         </p>
         <p className="mt-4 text-sm leading-relaxed text-ink-muted">
-          AI-Dictionary is an attempt to organize that knowledge into a single visual reference. Instead of treating concepts as isolated entries, it connects them into a knowledge graph where every concept is linked to the ideas that explain it, build upon it, or apply it. The goal isn't just to define terms—it's to provide context.
+          AI-Space is an attempt to organize that knowledge into a single visual reference. Instead of treating concepts as isolated entries, it connects them into a knowledge graph where every concept is linked to the ideas that explain it, build upon it, or apply it. The goal isn't just to define terms—it's to provide context.
         </p>
 
         <p className="mt-4 text-sm leading-relaxed text-ink-muted">
-          Whether you're revisiting the fundamentals of linear algebra, understanding why Transformers changed deep learning, or tracing the evolution from supervised fine-tuning to modern LLM post-training techniques, AI-Dictionary helps you explore concepts through their relationships rather than in isolation.
+          Whether you're revisiting the fundamentals of linear algebra, understanding why Transformers changed deep learning, or tracing the evolution from supervised fine-tuning to modern LLM post-training techniques, AI-Space helps you explore concepts through their relationships rather than in isolation.
         </p>
 
         <p className="mt-4 text-sm leading-relaxed text-ink-muted">

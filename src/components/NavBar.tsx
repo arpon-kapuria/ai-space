@@ -20,8 +20,8 @@ export function NavBar() {
           <line x1="23" y1="10" x2="22" y2="23" stroke="currentColor" strokeOpacity="0.25" strokeWidth="1.4" />
           <line x1="9" y1="22" x2="23" y2="10" stroke="currentColor" strokeOpacity="0.25" strokeWidth="1.4" />
         </svg>
-        <span className="font-display text-sm font-semibold translate-y-[0.3px] md:translate-y-1px leading-none tracking-tight text-ink">
-          AI-Dictionary
+        <span className="font-display text-sm font-semibold translate-y-1px md:translate-y-1px leading-none tracking-tight text-ink">
+          AI-Space
         </span>
       </NavLink>
 

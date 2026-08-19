@@ -29,7 +29,7 @@ export function Landing() {
         </h1>
 
         <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-ink-muted md:text-lg">
-          AI-Dictionary is an Interactive Knowledge Graph for AI Concepts.
+          AI-Space is an Interactive Knowledge Graph for AI Concepts.
           Every node is a concept. Every edge is a relationship.
         </p>
 

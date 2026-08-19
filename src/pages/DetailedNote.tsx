@@ -36,7 +36,7 @@ export function DetailedNote() {
 
   useEffect(() => {
     if (!topic) return;
-    document.title = `${topic.title} | AI-Dictionary`;
+    document.title = `${topic.title} | AI-Space`;
   }, [topic]);
 
   const toc = useMemo(

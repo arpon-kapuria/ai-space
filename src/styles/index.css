@@ -375,6 +375,10 @@ body {
    leaks its near-white --color-ink into the label text. */
 .prose-note .mermaid .nodeLabel p {
   color: #1c1c1e !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.4 !important;
 }
 
 .prose-note .mermaid .edgePath path {

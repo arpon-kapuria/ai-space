@@ -1,8 +1,8 @@
-# AI-Dictionary Guide
+# AI-Space Guide
 
 Modern AI knowledge is fragmented. Definitions live in one place, research papers in another, tutorials somewhere else, and the relationships between concepts are often left for you to figure out.
 
-AI-Dictionary is an attempt to organize that knowledge into a single visual reference. Instead of treating concepts as isolated entries, it connects them into a knowledge graph where every concept is linked to the ideas that explain it, build upon it, or apply it. The goal isn't just to define terms—it's to provide context.
+AI-Space is an attempt to organize that knowledge into a single visual reference. Instead of treating concepts as isolated entries, it connects them into a knowledge graph where every concept is linked to the ideas that explain it, build upon it, or apply it. The goal isn't just to define terms—it's to provide context.
 
 All topics are divided into eight categories (though more maybe be added in the future, if needed). Since many concepts overlap across multiple areas and are often adapted to different domains, assigning each topic to a single category was challenging. The categorization is therefore based on where each topic fits most naturally and the primary problem it was originally introduced to solve, even when the boundaries are not perfectly defined.
 
@@ -470,18 +470,18 @@ For reading order, refer to [READING_ORDER.md](READING_ORDER.md)
   - [x] Interconnects (NVLink, InfiniBand)
 - [x] GPU Programming
   - [x] CUDA Programming Model (Kernel, Threads, Blocks, Grids, Warps)
-  - [ ] GPU Memory (Global Memory / HBM, L2 Cache, Shared Memory, L1 Cache, Registers, The Memory Pyramid)
-  - [ ] Tensor Cores (Dedicated Matrix-Multiply Hardware — Why Mixed Precision & Quantization Are Actually Fast, Not Just Smaller)
-  - [ ] Kernel Optimization (Kernel Fusion, FlashAttention)
+  - [x] GPU Memory (Global Memory / HBM, L2 Cache, Shared Memory, L1 Cache, Registers, The Memory Pyramid)
+  - [x] Tensor Cores (Dedicated Matrix-Multiply Hardware — Why Mixed Precision & Quantization Are Actually Fast, Not Just Smaller)
+  - [x] Kernel Optimization (Kernel Fusion, FlashAttention)
   - [x] The Actual Tech Stack (cuBLAS / cuDNN, Triton, Raw CUDA, CUTLASS)
 - [x] Distributed Training
   - [x] Data Parallelism
   - [x] Tensor Parallelism
   - [x] Pipeline Parallelism
   - [x] Sequence Parallelism
-  - [ ] Context Parallelism (Ring Attention / DeepSpeed Ulysses — Long-Context Training)
+  - [x] Context Parallelism (Ring Attention / DeepSpeed Ulysses — Long-Context Training)
   - [x] ZeRO / Fully Sharded Data Parallel (FSDP)
-  - [ ] Expert Parallelism (GPU-Splitting Mechanics Only — Routing Logic Cross-Links to Mixture of Experts)
+  - [x] Expert Parallelism (GPU-Splitting Mechanics Only — Routing Logic Cross-Links to Mixture of Experts)
   - [x] 3D Parallelism (and Beyond: Hybrid N-D Parallelism, Combining All Strategies Above)
   - [x] Which Strategy Solves Which Problem
 
